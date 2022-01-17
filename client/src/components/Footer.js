@@ -8,7 +8,7 @@ const Footer = () => {
 
     return (
         <footer>
-            <div className="social">
+            <section className="social">
                 <ul className="social">
                 <li className="nav-item"><GitHubIcon /> https://github.com/evancp87</li>    
                 <li className="nav-item"><FacebookTwoToneIcon /> https://www.facebook.com/redrackham87</li>
@@ -16,7 +16,8 @@ const Footer = () => {
                 <li className="nav-item"><TwitterIcon />https://twitter.com/EvanPar74906861</li>
 
                 </ul>
-            </div>
+            </section>
+            <section className="copyright">@2022 Evan Parker</section>
         </footer>
     )
 

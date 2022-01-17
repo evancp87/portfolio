@@ -1,6 +1,5 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 function App() {
   const [data, setData] = React.useState(null);
@@ -13,21 +12,14 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {!data? 'Loading...' : data}
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<div className="sidebar"></div>
+<div className="main-content"></div>
+
+
+        <div>
+          <p>{!data ? "Loading..." : data}</p>
+        </div>
+      </div>
   );
 }
 

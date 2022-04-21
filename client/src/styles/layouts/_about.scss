@@ -1,0 +1,8 @@
+@use '../abstracts' as a;
+
+.about {
+    width: 100vw;
+height: 100vh;
+    padding: 2rem;
+    background-color: a.$grey;
+}

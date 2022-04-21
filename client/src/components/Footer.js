@@ -1,23 +1,21 @@
 import React from 'react';
-import FacebookTwoToneIcon from '@mui/icons-material/FacebookTwoTone';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import GitHubIcon from '@mui/icons-material/GitHub';
+// import FacebookTwoToneIcon from '@mui/icons-material/FacebookTwoTone';
+// import TwitterIcon from '@mui/icons-material/Twitter';
+// import InstagramIcon from '@mui/icons-material/Instagram';
+// import GitHubIcon from '@mui/icons-material/GitHub';
+// import {BsFillArrowUpCircleFill} from "react-icons/md";
 
 const Footer = () => {
 
     return (
-        <footer>
-            <section className="social">
-                <ul className="social">
-                <li className="nav-item"><GitHubIcon /> https://github.com/evancp87</li>    
-                <li className="nav-item"><FacebookTwoToneIcon /> https://www.facebook.com/redrackham87</li>
-                <li className="nav-item"><InstagramIcon />https://www.instagram.com/evsparks87/?hl=en</li>
-                <li className="nav-item"><TwitterIcon />https://twitter.com/EvanPar74906861</li>
+        <footer className="ftr skew skew5">
+            <div className="ftr-info">
 
-                </ul>
-            </section>
-            <section className="copyright">@2022 Evan Parker</section>
+                <img className="ftr-avatar" src={require("../assets/Images/footer-avatar.png")} alt="Evan Parker avatar"/>
+                <p className="copyright"> Evan Parker 2022</p>
+                <button className="contact-btn">Contact Me</button>
+            </div>
+                {/* <BsFillArrowUpCircleFill/> */}
         </footer>
     )
 

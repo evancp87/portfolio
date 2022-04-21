@@ -1,2 +1,23 @@
 @use '../abstracts' as *;
 
+.projects-link {
+    --clr-neon: hsl(317 100% 54%);
+    --clr-bg: hsl(323 21% 16%);
+
+    font-size: 1rem;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    border: 4px solid currentColor;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0 0.125em #fff,  
+    0 0 0 0.125em currentColor;
+}
+
+@mixin btn () {
+    
+}
+
+// https://www.youtube.com/watch?v=6xNcXwC6ikQ&t=979s

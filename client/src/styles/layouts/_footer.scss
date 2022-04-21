@@ -1,0 +1,17 @@
+@use '../abstracts' as a;
+
+.ftr {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffff;
+
+}
+.ftr-avatar {
+    
+        max-width: 300px;
+        height: auto;
+        border-radius: 50%;
+     
+}
+
+// https://www.geeksforgeeks.org/how-to-create-a-scroll-to-top-button-in-react-js/

@@ -1,8 +1,4 @@
-@forward '../pages/answer-question';
-@forward '../pages/dashboard';
-@forward '../pages/leaderboard';
-@forward '../pages/Navigation';
-@forward '../pages/new-question';
-@forward '../pages/not-found';
-@forward '../pages/question-result';
-@forward '../pages/signin';
+@forward 'about';
+@forward 'homepage';
+@forward 'projects';
+@forward 'skills';

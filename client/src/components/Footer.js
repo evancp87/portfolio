@@ -6,13 +6,16 @@ import React from 'react';
 // import {BsFillArrowUpCircleFill} from "react-icons/md";
 
 const Footer = () => {
-
+const date = new Date();
+const year = date.getFullYear();
     return (
-        <footer className="ftr skew skew5">
+        <footer className="ftr">
             <div className="ftr-info">
+<div class="ftr__container">
 
                 <img className="ftr-avatar" src={require("../assets/Images/footer-avatar.png")} alt="Evan Parker avatar"/>
-                <p className="copyright"> Evan Parker 2022</p>
+</div>
+                <p className="copyright"> Evan Parker {year}</p>
                 <button className="contact-btn">Contact Me</button>
             </div>
                 {/* <BsFillArrowUpCircleFill/> */}

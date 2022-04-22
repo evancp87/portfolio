@@ -1,6 +1,6 @@
 import React from 'react';
 import { MdArrowRightAlt } from "react-icons/md";
-
+// import {ReactComponent } from '../assets/Images/brick-wall.jpg'
 
 const Header = () => {
 const profilePic = {
@@ -12,8 +12,8 @@ const profilePic = {
 }
 
     return (
-        <header className='hdr skew1'>
-            <div className="hdr__intro">
+        <header className='hdr'>
+            <div className="hdr__intro ">
                 <h1 className="hdr__intro-heading">Hello, I am Evan Parker. Full Stack Developer</h1>
                 <picture className="avatar">
 

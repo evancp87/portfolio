@@ -21,8 +21,8 @@ function App() {
   return (
     <main className="App">
       <Nav />
-      <Socials/>
       <Header />
+      <Socials/>
       <Projects />
       <Skills/>
       <About />

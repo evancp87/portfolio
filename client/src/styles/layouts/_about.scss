@@ -3,6 +3,34 @@
 .about {
     width: 100vw;
 height: 100vh;
-    padding: 2rem;
+    // padding: 2rem;
     background-color: a.$grey;
+
+
+    position: relative;
+    z-index: 8;
+
+    &:before {
+        content:  '';
+        width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    bottom: 0;
+    transform-origin: left bottom;
+    transform: skewY(3deg);
+    }
+    &:after { 
+        content:  '';
+        width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    bottom: 0;
+    transform-origin: right bottom;
+    transform: skewY(-3deg);
+    }
+
 }

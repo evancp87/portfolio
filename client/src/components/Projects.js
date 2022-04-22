@@ -4,7 +4,7 @@ import Project from "./Project";
 
 const Projects = ({ props }) => {
   return (
-    <section className="projects-section skew skew2">
+    <section className="projects-section slanted">
       <div className="projects">
       <h2>Projects</h2>
 
@@ -13,9 +13,11 @@ const Projects = ({ props }) => {
             <a href={project.link}>
               <img src={project.image} alt={project.title} className="proj-img" />
             </a>
+            <div className="project__details">
               <h2> {project.title}</h2>
               <h3>{project.subtitle}</h3>
               <p className="proj-description">{project.description}</p>
+          </div>
           </div>
         ))}
       </div>

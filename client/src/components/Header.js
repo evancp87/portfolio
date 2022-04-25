@@ -1,6 +1,7 @@
 import React from 'react';
 import { MdArrowRightAlt } from "react-icons/md";
 // import {ReactComponent } from '../assets/Images/brick-wall.jpg'
+import Avatar from './Avatar';
 
 const Header = () => {
 const profilePic = {
@@ -15,10 +16,7 @@ const profilePic = {
         <header className='hdr'>
             <div className="hdr__intro ">
                 <h1 className="hdr__intro-heading">Hello, I am Evan Parker. Full Stack Developer</h1>
-                <picture className="avatar">
-
-                <img style={profilePic} src={require("../assets/Images/avatar.png")} alt="Evan Parker avatar"/>
-                </picture>
+                <Avatar/>
                 <button className="projects-link">See my work<MdArrowRightAlt/></button>
             </div>
         </header>

@@ -10,6 +10,8 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    z-index: 11;
+    position: relative;
 
 }
 .hdr__intro {
@@ -19,7 +21,7 @@
     align-items: center;
 
     .hdr__intro-heading {
-        padding-top: 10rem;
+        padding-top: 5rem;
         color: a.$grey-text;
         // font-size: clamp(a.$header-intro-sm, 10vw, a.$header-intro-lg);
         font-size: clamp(0.5rem, 5vw, 4rem);
@@ -27,6 +29,7 @@
         
     }
 }
+
 
 
     

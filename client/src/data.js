@@ -24,7 +24,7 @@ export const projects = [
     title: "Mars Rover Dashboard",
     subtitle: "",
     description: "A dashboard showing the information of 3 different Mars Rovers. Part of my Udacity Intermediate Javascript Nanodegree" ,
-    image: "",
+    image: homebrew,
     link: "https://marsrover-udacity.netlify.app/",
   },
   {
@@ -32,7 +32,8 @@ export const projects = [
     subtitle: "challenges completed on the Front End Mentor website",
     description:
       "challenges completed on the Front End Mentor website",
-    image: "",
+    image: wyr,
     link: "https://www.frontendmentor.io/profile/evancp87",
   },
 ];
+

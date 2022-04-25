@@ -8,8 +8,11 @@ const Nav = () => {
 
     return (
         <nav className='navigation'>
-            <ul className="nav-items">
+           <ul>
+
             <li className="logo nav-item">Evan Parker</li>
+           </ul>
+            <ul className="nav-items">
                 <li className="nav-item">Home</li>
                 <li className="nav-item">About</li>
                 <li className="nav-item">Projects</li>

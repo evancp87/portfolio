@@ -23,7 +23,7 @@ function App() {
       <Nav />
       <Header />
       <Socials/>
-      <Projects />
+      <Projects  />
       <Skills/>
       <About />
       <Footer />

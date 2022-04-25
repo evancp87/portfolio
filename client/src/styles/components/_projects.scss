@@ -20,9 +20,10 @@
 }
 
 .projects {
-    // width: calc((100% - 30px) * 4);
+    max-width: calc((100% - 30px) * 4);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 300px;
     .project {
         display: flex;
         flex-direction: column;
@@ -57,5 +58,6 @@
 
 .proj-description {
     color: blue;
+    margin-bottom: 5em;
 }
 

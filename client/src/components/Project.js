@@ -1,19 +1,22 @@
 import React from 'react'
-
+import {projects} from "../data";
 function Project(props) {
 
-    const {project} = props.projects;
+  
     return (
-        <ul>
-        <li key={project.title} className="project">
-        <a href={project.link}>
-          <img src={project.image} alt={project.title} className="proj-img" />
-        </a>
-          <h2> {project.title}</h2>
-          <h3>{project.subtitle}</h3>
-          <p className="proj-description">{project.description}</p>
-      </li>
-      </ul>
+        <ul  className="project">
+            <li>
+
+            <a href={props.link}>
+              <img src={props.image} alt={props.title} className="proj-img" />
+            </a>
+            <div className="project__details">
+              <h2> {props.title}</h2>
+              <h3>{props.subtitle}</h3>
+              <p className="proj-description">{props.description}</p>
+          </div>
+            </li>
+          </ul>
     )
 }
 

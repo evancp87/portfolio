@@ -1,18 +1,23 @@
 @use '../abstracts' as a;
 
 .about {
+  width: 100vw;
+  height: 100vh;
+  // padding: 2rem;
+  background-color: a.$grey;
+
+  position: relative;
+  z-index: 8;
+  padding-top: 10em;
+
+  .about__heading {
+    display: flex;
+    justify-content: center;
+  }
+
+  &:before {
+    content: "";
     width: 100vw;
-height: 100vh;
-    // padding: 2rem;
-    background-color: a.$grey;
-
-
-    position: relative;
-    z-index: 8;
-
-    &:before {
-        content:  '';
-        width: 100vw;
     height: 100vh;
     position: absolute;
     background: inherit;
@@ -20,10 +25,10 @@ height: 100vh;
     bottom: 0;
     transform-origin: left bottom;
     transform: skewY(3deg);
-    }
-    &:after { 
-        content:  '';
-        width: 100vw;
+  }
+  &:after {
+    content: "";
+    width: 100vw;
     height: 100vh;
     position: absolute;
     background: inherit;
@@ -31,6 +36,17 @@ height: 100vh;
     bottom: 0;
     transform-origin: right bottom;
     transform: skewY(-3deg);
-    }
-
+  }
 }
+
+.text {
+  font-size: clamp(0.5em, 2vw, 2.5em);
+  padding: clamp(7em, 2vw, 10em);
+}
+
+
+// @media screen and (min-width: a.$tablet-breakpoint) {
+//     .text {
+//         padding: 10rem;
+//       }
+// }

@@ -13,20 +13,20 @@ const Socials = () => {
       <IconContext.Provider
       value={{size: '3rem', padding: '5em' }}
     >
-        <li socials__item>
+        <li className="socials__item">
           <a href="https://github.com/evancp87">
 
           <AiFillGithub />
           </a>
         </li>
 
-        <li socials__item>
+        <li className="socials__item">
         <a href="https://www.instagram.com/evsparks87/">
           <AiFillInstagram />
           </a>
         </li>
 
-        <li socials__item>
+        <li className="socials__item">
         <a href="https://www.linkedin.com/in/evan-parker-9a336987/">
           <TiSocialLinkedinCircular />
           </a>

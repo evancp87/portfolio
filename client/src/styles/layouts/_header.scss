@@ -21,7 +21,7 @@
     align-items: center;
 
     .hdr__intro-heading {
-        padding-top: 5rem;
+        padding-top: 10rem;
         color: a.$grey-text;
         // font-size: clamp(a.$header-intro-sm, 10vw, a.$header-intro-lg);
         font-size: clamp(0.5rem, 5vw, 4rem);
@@ -35,17 +35,17 @@
     
 
 
-// @media only screen and (min-width: a.$desktop-breakpoint) {
-//     .hdr {
+@media only screen and (min-width: a.$tablet-breakpoint) {
+    .hdr {
         
-//         display: flex;
-//         justify-content: center;
-//         align-items: flex-start;
+        // display: flex;
+        // justify-content: center;
+        // align-items: flex-start;
     
-//         .hdr__intro-heading {
-//             padding-top: 10rem;
-//             color: a.$grey-text;
-//         }
+        .hdr__intro-heading {
+            padding-top: 5rem;
+            color: a.$grey-text;
+        }
     
-//     }
-// }
+    }
+}

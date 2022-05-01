@@ -11,7 +11,9 @@
   left: 0;
   border-bottom: 1px solid #000;
   height: 100px;
+  
   z-index: 12;
+  color: a.$grey;
 
   .logo {
     letter-spacing: 5px;
@@ -23,11 +25,17 @@
    display:contents;
    margin: {
      right: 1em;
-   }
+   } 
+   transition: all 0.5s ease-in-out;
+   cursor: pointer;
     
-
-   
+.nav-item {
+  &:hover {
+    color: scale-color($color: a.$grey,  $lightness: -30%)
   }
+ }
+
+}
 }
 
 

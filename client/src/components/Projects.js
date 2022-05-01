@@ -5,8 +5,8 @@ import Project from "./Project";
 const Projects = () => {
   return (
     <section className="projects-section">
-      <div className="projects">
       <h2>Projects</h2>
+      <div className="projects">
 
         {projects.map((project) => (
           <div key={project.title} className="project">

@@ -1,7 +1,9 @@
+@use '../abstracts' as a;
+
 .socials {
     position: fixed;
-    top: 50%;
-   right: 0;
+    top: 40%;
+   right: -1%;
    display: flex;
    flex-direction: column;
    z-index: 20;
@@ -11,10 +13,14 @@
 }
 
 .socials__item {
-
+    margin: 1em;
+     a {
+    color: a.$black;
+    transition: all 0.5s ease-in-out;
     &:hover {
-        background-color: scale-color($color: #000000,  $lightness: +10%, )
+        color: scale-color($color: a.$black,  $lightness: +80%, )
     }
+}
 
-    
+
 }

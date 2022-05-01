@@ -1,1 +1,15 @@
 // https://youtu.be/Aeye2Wh5dEc
+
+
+// contact button in footer animation
+
+@keyframes scrollContact {
+
+    from  {
+-webkit-transform: translateX(0);
+transform: translateX(0);
+    } to {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+}

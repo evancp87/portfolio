@@ -1,0 +1,8 @@
+@use '../abstracts' as a;
+
+.scroll-btn {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    color:  a.$st-patricks-blue;
+}

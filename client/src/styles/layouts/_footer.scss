@@ -19,16 +19,48 @@ position: relative;
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: red;
 
-   > .ftr-avatar {
+}
+.ftr-avatar {
+    // position: absolute;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    border: 10px solid a.$black;
+
+    
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-btn {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    margin-top: 1em;
+    border-radius: 10px;
+    position: relative;
+    background: blue;
+
+
+    span {
         position: absolute;
-        max-width: 300px;
-        height: auto;
-        border-radius: 50%;
-        
-        
+        white-space: nowrap;
+        transform: translateX(0);
+    transition: all 1s ease-in-out;
+
+
+        &:hover {
+            // transform: translateX(calc(200px - 100%));
+            animation: scrollContact 3s infinite;
+        }
     }
 }
 
+// https://stackoverflow.com/questions/34883555/how-to-scroll-text-within-a-div-to-left-when-hovering-the-div
 // https://www.geeksforgeeks.org/how-to-create-a-scroll-to-top-button-in-react-js/

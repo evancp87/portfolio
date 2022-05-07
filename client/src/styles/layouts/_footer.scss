@@ -1,66 +1,106 @@
 @use '../abstracts' as a;
 
 .ftr {
-    width: 100vw;
-    height: 100vh;
-    background-color: #ffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    .ftr-intro {
-        display: contents;
-    }
+  .ftr-intro {
+    display: contents;
+  }
 }
 
 .ftr-container {
-position: relative;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-color: red;
-
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: red;
 }
 .ftr-avatar {
-    // position: absolute;
-    max-width: 300px;
-    height: auto;
-    border-radius: 50%;
-    border: 10px solid a.$black;
-
-    
+  // position: absolute;
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid a.$black;
 }
 
 .copyright {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+  .scroll-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
 }
 
 .contact-btn {
-    display: inline-block;
-    width: 200px;
-    height: 50px;
-    margin-top: 1em;
-    border-radius: 10px;
-    position: relative;
-    background: blue;
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  margin: 1em 0;
+  border-radius: 10px;
+  position: relative;
+  background: a.$grey;
+  overflow: hidden;
+  transition: 0.2s;
+  cursor: pointer;
 
-
-    span {
-        position: absolute;
-        white-space: nowrap;
-        transform: translateX(0);
-    transition: all 1s ease-in-out;
-
-
-        &:hover {
-            // transform: translateX(calc(200px - 100%));
-            animation: scrollContact 3s infinite;
-        }
+  &:hover {
+    .contact__btn-text {
+      margin-left: 65px;
+      transition: 0.2s;
     }
+
+    .contact__btn-inner {
+      left: -130px;
+    }
+  }
 }
 
-// https://stackoverflow.com/questions/34883555/how-to-scroll-text-within-a-div-to-left-when-hovering-the-div
-// https://www.geeksforgeeks.org/how-to-create-a-scroll-to-top-button-in-react-js/
+.contact__btn-container {
+  margin-top: 1em;
+}
+// .contact-btn:hover .contact__btn-text {
+//   margin-left: 65px;
+// }
+
+// .contact-btn:hover .contact__btn-inner {
+//   left: -130px;
+// }
+
+.contact__btn-inner {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  margin-top: -100px;
+  //   margin-top: -100px;
+  // padding-top: 15px;
+  left: -250px;
+  transition: 0.3s;
+  background: a.$st-patricks-blue;
+
+  .contact__btn-inner-text {
+    margin-top: 63px;
+    margin-right: -130px;
+    padding-top: 1.2em;
+  }
+}
+
+@media screen and (max-width: a.$md-tablet-breakpoint) {
+  .ftr__container {
+    display: flex;
+    justify-content: center;
+
+    > .ftr__avatar {
+      max-width: 150px;
+    }
+  }
+}

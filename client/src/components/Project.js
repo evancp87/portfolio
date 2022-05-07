@@ -1,23 +1,25 @@
-import React from 'react'
-import {projects} from "../data";
+import React from "react";
+import { projects } from "../data";
 function Project(props) {
+  return (
+    <li key={props.index} className="project">
 
-  
-    return (
-        <ul  className="project">
-            <li>
+        <div className="projects__proj-img-container">
+          <a href={props.link}>
+            <img src={props.image} alt={props.title} className="proj-img" />
+          </a>
+        </div>
+        <div className="project__details">
+          <div className="project__header">
 
-            <a href={props.link}>
-              <img src={props.image} alt={props.title} className="proj-img" />
-            </a>
-            <div className="project__details">
-              <h2> {props.title}</h2>
-              <h3>{props.subtitle}</h3>
-              <p className="proj-description">{props.description}</p>
+          <h2 className="project__header-title"> {props.title}</h2>
           </div>
-            </li>
-          </ul>
-    )
+          
+          <p className="proj-description">{props.description}</p>
+        </div>
+    </li>
+      
+  );
 }
 
-export default Project
+export default Project;

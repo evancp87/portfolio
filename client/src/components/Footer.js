@@ -17,7 +17,19 @@ const Footer = () => {
         <div className="copyright">
 
         <p> Evan Parker ⓒ {year}</p>
-        <button className="contact-btn"><span>Contact Me</span></button>
+        <button className="contact-btn">
+
+        <a  href="mailto:evancp@hotmail.com?subject=🫱🏼‍🫲🏽 Let's work together!">
+          <div className="contact__btn-container">
+
+          <p className="contact__btn-text"> Contact Me</p>
+          </div>
+          <div className="contact__btn-inner">
+            <p className="contact__btn-inner-text">Now!</p>
+            </div>
+         
+          </a>
+        </button>
         <ScrollButton/>
         </div>
       </div>

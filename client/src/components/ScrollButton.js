@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {FaArrowCircleUp} from 'react-icons/fa';
+import {BsFillArrowUpCircleFill} from 'react-icons/bs';
 function ScrollButton() {
 
     const [visible, setVisible] = useState(false);
@@ -7,7 +7,7 @@ function ScrollButton() {
     function toggleVisible () {
         const scrolled = document.documentElement.scrollTop;
 
-        if (scrolled > 800) {
+        if (scrolled > 3400) {
           return  setVisible(true);
         } else {
             return setVisible(false);
@@ -17,7 +17,8 @@ function ScrollButton() {
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behaviour: 'smooth'
+            overflowY: 'scroll',
+            behavior: 'smooth'
         })
 
     }
@@ -25,10 +26,12 @@ function ScrollButton() {
     window.addEventListener('scroll', toggleVisible);
 
     return (
-        <button className="scroll-btn">
-          <FaArrowCircleUp 
-          onClick={scrollToTop}
-          style={{display: visible ? 'inline' : 'none' }}
+        <button className="scroll-btn"
+        onClick={scrollToTop}
+        style={{display: visible ? 'inline' : 'none' ,border: 'none', background: 'none', width: '150px', height: 'auto', transition: '1s'}}
+        
+        >
+          <BsFillArrowUpCircleFill 
           />  
         </button>
     )

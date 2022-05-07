@@ -11,7 +11,7 @@ const Socials = () => {
     <div className="socials">
       <ul >
       <IconContext.Provider
-      value={{size: '3rem', padding: '5em' }}
+      value={{size: '2rem', padding: '5em' }}
     >
         <li className="socials__item">
           <a href="https://github.com/evancp87">

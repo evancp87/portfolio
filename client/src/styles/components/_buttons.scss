@@ -1,115 +1,139 @@
 @use '../abstracts' as *;
 
 .projects-link {
-    --clr-neon: hsl(317 100% 54%);
-    --clr-bg: hsl(323 21% 16%);
+  --clr-neon: hsl(317 100% 54%);
+  --clr-bg: hsl(323 21% 16%);
 
-    font-size: 1rem;
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--clr-neon);
-    border: 4px solid currentColor;
-    padding: 0.25em 1em;
-    border-radius: 0.25em;
-    text-shadow: 0 0 0 0.125em #fff,  
-    0 0 0 0.125em currentColor;
+  font-size: 1rem;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-neon);
+  border: 4px solid currentColor;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  text-shadow: 0 0 0 0.125em #fff, 0 0 0 0.125em currentColor;
 }
 
-@mixin btn () {
-    
+@mixin btn() {
 }
 
-.projects-btn {
+// .projects-btn {
 
-}
-
+// }
 
 // NeonButton component styling
-
+.neon-button {
+  background: none;
+  border: none;
+}
 
 .neon-btn {
-    text-decoration: none;
-    transition: 0.2s ease-in-out;
-    font-size: 24px;
-    color: #2196f3;
-    display: inline-block;
-    position: relative;
-    letter-spacing: 4px;
-    /* overflow: hidden; */
-    padding: 15px 30px;
-    /* border-radius: 10px; */
-  }
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  font-size: 1.5em;
+  color: #2196f3;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 4px;
+   overflow: hidden; 
+  padding: 15px 30px;
+  /* border-radius: 10px; */
   
-  .neon-btn:hover {
+  span {
+    position: absolute;
+    display: block;
+  }
+  &:hover {
     color: #255784;
     background-color: #2196f3;
     box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
-    transition-delay: 0.4s;
-  
+    transition-delay: 1s;
 
-    span {
-            position: absolute;
-            display: block;
-          }
+    .arrow {
+      // -webkit-animation: flipArrow 0.5s 0.5s;
+      // animation: flipArrow 0.5s 1 0.5s;
+      transition-delay: 0.4s;
+      transition: 0.6s;
+      transform: rotate(90deg);
+    //   margin-top: 0.1em;
+    // margin-left: 0.1em;
+      // margin-right: 1em;
+    }
+  }
 }
-  
-  
-  
-//   a span:nth-child(1) {
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 2px;
-//     background-color: linear-gradient(90deg, transparent, #2196f3);
+
+
+
+//   &:hover {
+//     -webkit-animation: flipArrow 0.5s 0.5s;
+
+//     animation: flipArrow 0.5s 1 0.5s;
 //   }
-  
-//   a:hover span:nth-of-type(1) {
-//     left: 100%;
-//     transition: 1s;
-//   }
-  
-//   a span:nth-child(3) {
-//     top: 0;
-//     left: -100%;
-//     width: 100%;
-//     height: 2px;
-//     background-color: linear-gradient(270deg, transparent, #2196f3);
-//   }
-  
-//   a:hover span:nth-of-type(3) {
-//     right: 100%;
-//     transition: 1s;
-//     transition-delay: 0.5s;
-//   }
-  
-//   a span:nth-child(2) {
-//     top: -100%;
-//     left: 0;
-//     width: 2px;
-//     height: 2px;
-//     background-color: linear-gradient(180deg, transparent, #2196f3);
-//   }
-  
-//   a:hover span:nth-of-type(2) {
-//     top: 100%;
-//     transition: 1s;
-//     transition-delay: 0.25s;
-//   }
-  
-//   a span:nth-child(4) {
-//     bottom: -100%;
-//     right: 0;
-//     width: 2px;
-//     height: 2px;
-//     background-color: linear-gradient(360deg, transparent, #2196f3);
-//   }
-  
-//   a:hover span:nth-of-type(4) {
-//     bottom: 100%;
-//     transition: 1s;
-//     transition-delay: 0.75s;
-//   }
-  
+// }
+
+a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2196f3);
+}
+
+a:hover span:nth-of-type(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #2196f3);
+}
+
+a:hover span:nth-of-type(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 10px;
+  background: linear-gradient(180deg, transparent, #2196f3);
+}
+
+a:hover span:nth-of-type(2) {
+  top: 100%;
+  transition: 0.5s;
+  transition-delay: 0.25s;
+}
+
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 10px;
+  background: linear-gradient(360deg, transparent, #2196f3);
+}
+
+a:hover span:nth-of-type(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+@keyframes flipArrow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
 
 // https://www.youtube.com/watch?v=6xNcXwC6ikQ&t=979s

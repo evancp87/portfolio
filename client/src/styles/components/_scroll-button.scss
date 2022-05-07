@@ -5,4 +5,10 @@
     height: auto;
     border-radius: 50%;
     color:  a.$st-patricks-blue;
+    cursor: pointer;
+    > svg {
+        width: 100px;
+        height: 100px;
+        margin-top: 5em;
+    }
 }

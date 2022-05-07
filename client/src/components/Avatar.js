@@ -1,55 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
+const classNames= require('classnames');
 
 function Avatar() {
-  const profilePic = {
-    width: "300px",
-    height: "300px",
-    borderRadius: "50%",
-    border: "10px solid black",
-    position: "absolute",
-    left: "40%",
-    top: "50%"
-  };
+  const [isActive, setActive] = useState(false);
+
+  function flipImage() {
+    setActive(!isActive);
+  }
+
+  
   return (
-    <div class="avatar-container">
-      {/* <div className="card">
-        <div className="face front">
+    <div className={classNames('avatar-container', isActive && "flip-img")} onClick={flipImage}>
+      <div className="card" title="Flip me">
+       
           <img
-            style={profilePic}
             src={require("../assets/Images/avatar.png")}
             alt="Evan Parker avatar"
+            className=" front"
           />
-        </div>
-        <div className="face back">
+
           <img
-            style={profilePic}
-            src={require("../assets/Images/footer-avatar.png")}
+            src={require("../assets/Images/evan-portrait.jpeg")}
             alt="Evan Parker avatar"
+            className=" back"
           />
-        </div>
-      </div> */}
-        <div className="card" title="Flip me" >
-    
-          <img
-            style={profilePic}
-            src={require("../assets/Images/avatar.png")}
-            alt="Evan Parker avatar"
-            className="face front"
-          />
-        
-    
-          <img
-            style={profilePic}
-            src={require("../assets/Images/footer-avatar.png")}
-            alt="Evan Parker avatar"
-            className="face back"
-          />
-        
       </div>
     </div>
   );
 }
-
 
 // http://css3.bradshawenterprises.com/flip/#xandy
 export default Avatar;

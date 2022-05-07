@@ -23,6 +23,7 @@
 
   .nav-items {
    display:contents;
+   font-size: 0.7rem;
    margin: {
      right: 1em;
    } 
@@ -38,4 +39,8 @@
 }
 }
 
-
+@media screen and (min-width: a.$xs-tablet-breakpoint) {
+  .nav-item {
+    font-size: 1rem;
+  }
+}

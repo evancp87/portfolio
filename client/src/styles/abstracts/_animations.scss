@@ -9,7 +9,8 @@
 -webkit-transform: translateX(0);
 transform: translateX(0);
     } to {
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
+        // -webkit-transform: translateX();
+        // transform: translateX(-100%);
+        transform: translateX(calc(200px - 100%));;
     }
 }

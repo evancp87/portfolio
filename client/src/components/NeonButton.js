@@ -3,14 +3,17 @@ import { MdArrowRightAlt } from "react-icons/md";
 
 function NeonButton() {
   return (
-    <a href="#" class="neon-btn">
+    <button className="neon-button">
+
+    <a href="#" className="neon-btn">
       <span></span>
       <span></span>
       <span></span>
       <span></span>
       See my work
-      <MdArrowRightAlt />
+      <MdArrowRightAlt className="arrow"/>
     </a>
+    </button>
   );
 }
 

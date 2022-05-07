@@ -5,13 +5,8 @@ import Avatar from './Avatar';
 import NeonButton from './NeonButton';
 
 const Header = () => {
-const profilePic = {
-    width: '300px',
-    height: 'auto',
-    borderRadius: '50%',
-    border: '10px solid black',
-   
-}
+
+
 
     return (
         <header className='hdr'>

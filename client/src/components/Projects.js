@@ -5,21 +5,27 @@ import Project from "./Project";
 const Projects = () => {
   return (
     <section className="projects-section">
-      <h2>Projects</h2>
-      <div className="projects">
+      <div className="projects__header">
 
-        {projects.map((project) => (
-          <div key={project.title} className="project">
+      <h2>Projects</h2>
+      </div>
+      <ul className="projects">
+
+
+        {projects.map((project, index) => (
+          
             <Project 
+            key={index}
+            id={index}
             title={project.title}
             image={project.image}
             link={project.link}
             subtitle={project.subtitle}
             description={project.description}
             />
-          </div>
+          
         ))}
-      </div>
+      </ul>
     </section>
   );
 };

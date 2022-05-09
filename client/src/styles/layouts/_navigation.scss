@@ -11,36 +11,45 @@
   left: 0;
   border-bottom: 1px solid #000;
   height: 100px;
-  
+
   z-index: 12;
   color: a.$grey;
 
   .logo {
-    letter-spacing: 5px;
+    font-size: 1rem;
+    font-family: "Shrikhand", cursive;
     // display: flex;
     // justify-content:space-between;
   }
 
   .nav-items {
-   display:contents;
-   font-size: 0.7rem;
-   margin: {
-     right: 1em;
-   } 
-   transition: all 0.5s ease-in-out;
-   cursor: pointer;
-    
-.nav-item {
-  &:hover {
-    color: scale-color($color: a.$grey,  $lightness: -30%)
-  }
- }
+    display: contents;
+    font-size: 0.7rem;
+    margin: {
+      right: 1em;
+    }
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
 
-}
+    .nav-item {
+      > a {
+        color: inherit;
+        &:hover {
+          color: scale-color($color: a.$grey, $lightness: -30%);
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: a.$xs-tablet-breakpoint) {
   .nav-item {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: a.$xs-device-breakpoint) {
+  .logo {
     font-size: 1rem;
   }
 }

@@ -8,9 +8,8 @@
   max-width: 400px;
   display: block;
   width: 200px;
-    height: 200px;
-    cursor: pointer;
-  
+  height: 200px;
+  cursor: pointer;
 
   .card {
     width: 100%;
@@ -18,25 +17,19 @@
     transform-style: preserve-3d;
     transition: all 0.6s linear;
     position: relative;
-  z-index: 30;
-  perspective: 1000px;
-
+    z-index: 30;
+    perspective: 1000px;
   }
-  // &:hover {
-  //   .card {
-  //     transform: rotateY(180deg);
-  //   }
-  // }
-  
 }
 
-.flip-img { 
+.flip-img {
   .card {
-      transform: rotateY(180deg);
-    }
+    transform: rotateY(180deg);
   }
+}
 
-.front, .back {
+.front,
+.back {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   width: 100%;
@@ -44,20 +37,14 @@
   border-radius: 50%;
   border: 5px solid black;
   position: absolute;
-  
 }
-
-
 
 .back {
   display: block;
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
   box-sizing: border-box;
- 
 }
-
-
 
 @media only screen and (max-width: a.$md-tablet-breakpoint) {
   .avatar-container {
@@ -66,13 +53,10 @@
   }
 }
 
-
 @media only screen and (min-width: a.$lg-computer-breakpoint) {
   .avatar-container {
-   
     width: 400px;
     display: block;
-     height: 400px;
+    height: 400px;
   }
-  
-  }
+}

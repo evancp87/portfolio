@@ -12,14 +12,11 @@
   transition: 0.4s ease-in-out;
 
   &:hover {
-    // -webkit-transform: translateY(-1em);
-    // transform: translateY(-1em);
     @include a.prefix(transform, translateY(-1em), moz webkit);
   }
 
   > .scroll-button-arrow {
     width: 100%;
     height: auto;
-    // margin-top: 5em;
   }
 }

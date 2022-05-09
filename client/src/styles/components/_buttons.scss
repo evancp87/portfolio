@@ -15,13 +15,6 @@
   text-shadow: 0 0 0 0.125em #fff, 0 0 0 0.125em currentColor;
 }
 
-@mixin btn() {
-}
-
-// .projects-btn {
-
-// }
-
 // NeonButton component styling
 .neon-button {
   background: none;
@@ -52,24 +45,12 @@
     transition-delay: 1s;
 
     .arrow {
-      // -webkit-animation: flipArrow 0.5s 0.5s;
-      // animation: flipArrow 0.5s 1 0.5s;
       transition-delay: 0.4s;
       transition: 0.6s;
       transform: rotate(90deg);
-      //   margin-top: 0.1em;
-      // margin-left: 0.1em;
-      // margin-right: 1em;
     }
   }
 }
-
-//   &:hover {
-//     -webkit-animation: flipArrow 0.5s 0.5s;
-
-//     animation: flipArrow 0.5s 1 0.5s;
-//   }
-// }
 
 a span:nth-child(1) {
   top: 0;
@@ -134,5 +115,3 @@ a:hover span:nth-of-type(4) {
     transform: rotate(90deg);
   }
 }
-
-// https://www.youtube.com/watch?v=6xNcXwC6ikQ&t=979s

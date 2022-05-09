@@ -21,11 +21,17 @@ function App() {
   return (
     <main className="App">
       <Nav />
+
       <Header />
-      <Socials/>
-      <Projects  />
-      <Skills/>
+
+      <Socials />
+
+      <Projects />
+
+      <Skills />
+
       <About />
+
       <Footer />
 
       {/* <div>

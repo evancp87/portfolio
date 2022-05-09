@@ -1,26 +1,27 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-  
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
-  
-  html {
-    font-size: 100%;
-    font-family: 'Titillium Web', sans-serif;
-    min-height: 100%;
+html {
+  font-size: 100%;
+  font-family: "Titillium Web", sans-serif;
+  min-height: 100%;
+}
 
-  }
- 
-  li {
-    list-style: none;
-  }
+li {
+  list-style: none;
+}
 
-  a {
-    text-decoration: none;
-  }
+a {
+  text-decoration: none;
+}
 
-  main {
-    max-width: 1600px;
-  }
+main {
+  max-width: 1600px;
+}
+
+* {
+  scroll-behavior: smooth;
+}

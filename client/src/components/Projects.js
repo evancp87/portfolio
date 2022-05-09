@@ -4,17 +4,13 @@ import Project from "./Project";
 
 const Projects = () => {
   return (
-    <section className="projects-section">
+    <section className="projects-section" id="projects">
       <div className="projects__header">
-
-      <h2>Projects</h2>
+        <h2>Projects</h2>
       </div>
       <ul className="projects">
-
-
         {projects.map((project, index) => (
-          
-            <Project 
+          <Project
             key={index}
             id={index}
             title={project.title}
@@ -22,8 +18,7 @@ const Projects = () => {
             link={project.link}
             subtitle={project.subtitle}
             description={project.description}
-            />
-          
+          />
         ))}
       </ul>
     </section>

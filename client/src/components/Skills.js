@@ -1,6 +1,6 @@
-import {React} from "react";
-import Skill from './Skill';
-import {SkillInfo} from '../skillsData';
+import { React } from "react";
+import Skill from "./Skill";
+import { SkillInfo } from "../skillsData";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { DiJavascript1 } from "react-icons/di";
 // import { DiReact } from "react-icons/di";
@@ -11,19 +11,13 @@ import {SkillInfo} from '../skillsData';
 // import { BsFillBootstrapFill } from "react-icons/bs";
 // import { SiJquery } from "react-icons/si";
 
-
-
 const Skills = () => {
-
-   
-
-    return (
-<section className="skills">
-    <div className="skills__header">
-
-    <h2 >Skills</h2>
-    </div>
-    {/* < ul className="skills__list">
+  return (
+    <section className="skills" id="skills">
+      <div className="skills__header">
+        <h2>Skills</h2>
+      </div>
+      {/* < ul className="skills__list">
     <li className="skill"><DiReact/></li>
     <li className="skill"><DiJavascript1 /></li>
     <li className="skill"><DiMongodb /></li>
@@ -32,19 +26,16 @@ const Skills = () => {
     <li className="skill"><DiSass /></li>  
     <li className="skill"><BsFillBootstrapFill /></li>  
     <li className="skill"><SiJquery /></li>   */}
-<ul className="skills__list">
-    {SkillInfo.map((skill) => 
-    <Skill
-    image={skill.image}
-    title={skill.title}
-    description={skill.description}
-    
-    
-    />
-    
-    )}
+      <ul className="skills__list">
+        {SkillInfo.map((skill) => (
+          <Skill
+            image={skill.image}
+            title={skill.title}
+            description={skill.description}
+          />
+        ))}
 
-    {/* <li className="skills__item"><img 
+        {/* <li className="skills__item"><img 
     className="skills__icon"
             // style={skill}
             src={require("../assets/Images/bootstrap.png")}
@@ -107,10 +98,9 @@ const Skills = () => {
             alt="Evan Parker avatar"
             // className="face front"
           /></li> */}
-     
-    </ul>
-</section>
-    )
-} 
+      </ul>
+    </section>
+  );
+};
 
-export default Skills
+export default Skills;

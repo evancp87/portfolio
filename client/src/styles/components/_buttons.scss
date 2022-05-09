@@ -33,13 +33,14 @@
   transition: 0.2s ease-in-out;
   font-size: 1.5em;
   color: #2196f3;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   position: relative;
   letter-spacing: 4px;
-   overflow: hidden; 
+  overflow: hidden;
   padding: 15px 30px;
   /* border-radius: 10px; */
-  
+
   span {
     position: absolute;
     display: block;
@@ -56,14 +57,12 @@
       transition-delay: 0.4s;
       transition: 0.6s;
       transform: rotate(90deg);
-    //   margin-top: 0.1em;
-    // margin-left: 0.1em;
+      //   margin-top: 0.1em;
+      // margin-left: 0.1em;
       // margin-right: 1em;
     }
   }
 }
-
-
 
 //   &:hover {
 //     -webkit-animation: flipArrow 0.5s 0.5s;

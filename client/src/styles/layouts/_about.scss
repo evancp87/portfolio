@@ -3,7 +3,6 @@
 .about {
   width: 100vw;
   height: 100vh;
-  // padding: 2rem;
   background-color: a.$grey;
   display: flex;
   flex-direction: column;
@@ -50,12 +49,6 @@
     bottom: 0;
   }
 }
-
-// @media screen and (min-width: a.$tablet-breakpoint) {
-//     .text {
-//         padding: 10rem;
-//       }
-// }
 
 @media only screen and (min-width: a.$lg-computer-breakpoint) {
   .text {

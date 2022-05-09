@@ -23,7 +23,9 @@
 }
 .ftr-avatar {
   // position: absolute;
-  max-width: 200px;
+  width: 200px;
+
+  max-width: 400px;
   height: auto;
   border-radius: 50%;
   border: 5px solid a.$black;
@@ -46,12 +48,17 @@
   width: 200px;
   height: 50px;
   margin: 1em 0;
+  color: a.$grey;
   border-radius: 10px;
   position: relative;
-  background: a.$grey;
+  background: a.$st-patricks-blue;
   overflow: hidden;
   transition: 0.2s;
   cursor: pointer;
+
+  .contact__btn-text {
+    color: a.$grey;
+  }
 
   &:hover {
     .contact__btn-text {
@@ -85,12 +92,13 @@
   // padding-top: 15px;
   left: -250px;
   transition: 0.3s;
-  background: a.$st-patricks-blue;
+  background: a.$red;
 
   .contact__btn-inner-text {
     margin-top: 63px;
     margin-right: -130px;
     padding-top: 1.2em;
+    color: a.$grey;
   }
 }
 
@@ -102,5 +110,13 @@
     > .ftr__avatar {
       max-width: 150px;
     }
+  }
+}
+
+@media only screen and (min-width: a.$lg-computer-breakpoint) {
+  .ftr-avatar {
+    width: 400px;
+    display: block;
+    height: 400px;
   }
 }

@@ -6,7 +6,7 @@ function ScrollButton() {
   function toggleVisible() {
     const scrolled = document.documentElement.scrollTop;
 
-    if (scrolled > 3400) {
+    if (scrolled > 0.8) {
       return setVisible(true);
     } else {
       return setVisible(false);
@@ -29,11 +29,11 @@ function ScrollButton() {
       onClick={scrollToTop}
       style={{
         display: visible ? "inline" : "none",
-        border: "none",
-        background: "none",
-        width: "150px",
-        height: "auto",
-        transition: "1s",
+        // border: "none",
+        // background: "none",
+        // width: "150px",
+        // height: "auto",
+        // transition: "1s",
       }}
     >
       <BsFillArrowUpCircleFill className="scroll-button-arrow" />

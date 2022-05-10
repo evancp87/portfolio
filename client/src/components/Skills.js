@@ -5,7 +5,7 @@ import { SkillInfo } from "../skillsData";
 // skills list component- mapping over data from the skillsData file and rendering a skill component for each entry
 const Skills = () => {
   return (
-    <section className="skills" id="skills">
+    <section className="skills" id="skills" tabindex="0">
       <div className="skills__header">
         <h2>Skills</h2>
       </div>

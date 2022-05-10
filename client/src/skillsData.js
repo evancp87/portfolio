@@ -1,4 +1,3 @@
-
 const bootstrapIcon = require("./assets/Images/bootstrap.png");
 const htmlIcon = require("./assets/Images/html-5.png");
 const javascriptIcon = require("./assets/Images/javascript.png");
@@ -11,57 +10,57 @@ const sqlIcon = require("./assets/Images/sql.png");
 
 export const SkillInfo = [
   {
-    title: "Bootstrap",
-    image: bootstrapIcon,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    title: "HTML",
-    image: htmlIcon,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
     title: "JavaScript",
     image: javascriptIcon,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    title: "CSS",
-    image: cssIcon,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "I have strong knowledge of JavaScript, including programming paradigms like functional programming and object oriented programming, the latest ES6+ syntax, as well as advanced concepts like higher order functions, async-await and promises.",
   },
   {
     title: "Node JS",
     image: nodeJSIcon,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "I use Node JS and framework Express for setting up servers, building RESTFUL apis, as well as consuming data from apis, and hooking up my app frontend to databases, using CRUD operations.",
   },
   {
     title: "React",
     image: reactIcon,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "I am experienced with JS library React, standard concepts like hooks, props and destructuring, alongside more advanced ones like Context Api, Redux, and more. Currently learning React Native and Next JS.",
+  },
+  {
+    title: "HTML",
+    image: htmlIcon,
+    description:
+      "I use HTML5 semantic tags to provide a clear, semantic hierarchy to my websites, ensuring accessibility and readability.",
+  },
+  {
+    title: "CSS",
+    image: cssIcon,
+    description:
+      "I am able to build beautiful, responsive, and accessible websites using CSS, applying BEM methodology, and other concepts such as Flexbox and Grid.",
+  },
+  {
+    title: "Bootstrap",
+    image: bootstrapIcon,
+    description:
+      "I am able to utilise this CSS framework to quickly set up responsive and attractive UI for projects.",
   },
   {
     title: "Sass",
     image: sassIcon,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Sass is my preferred CSS pre-processor, which i use as default for all projects. I use mixins, variables, inheritance, sass functions to write code that is DRY, hierarchical and dynamic.",
   },
   {
     title: "MongoDB",
     image: mongoDBIcon,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "I tend to use the MongoDB package Mongoose, as my main NoSQL language, as part of the MERN stack. I also understand security and authentication concepts such as salting, hashing, and using PassportJS and AuthO to build secure and efficient applications with databases.",
   },
   {
     title: "SQL",
     image: sqlIcon,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "I use MYSQL and MYSQL Workbench to build databases, alongside Node Express and React.",
   },
 ];

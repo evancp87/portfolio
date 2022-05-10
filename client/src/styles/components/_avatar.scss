@@ -1,5 +1,6 @@
 @use '../abstracts' as a;
 
+// double sided avatar image
 .avatar-container {
   position: relative;
   z-index: 30;
@@ -11,7 +12,8 @@
   height: 200px;
   cursor: pointer;
 
-  .card {
+  // preserve-3d to get sense of perspective as img rotates
+  .avatar__card {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
@@ -23,15 +25,15 @@
 }
 
 .flip-img {
-  .card {
-    transform: rotateY(180deg);
+  .avatar__card {
+    @include a.prefix(transform, rotateY(180deg), ms moz webkit);
   }
 }
 
-.front,
-.back {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+// front and back of card
+.avatar__front,
+.avatar__back {
+  @include a.prefix(backface-visibility, hidden, ms moz webkit);
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -39,10 +41,9 @@
   position: absolute;
 }
 
-.back {
+.avatar__back {
   display: block;
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  @include a.prefix(transform, rotateY(180deg), ms moz webkit);
   box-sizing: border-box;
 }
 

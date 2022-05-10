@@ -1,6 +1,8 @@
 @use '../abstracts/' as a;
 
-.projects-section {
+// project section- slanted top and bottom with before and after
+
+.projects {
   background-color: a.$white;
   width: 100vw;
   position: relative;
@@ -18,8 +20,8 @@
     background: inherit;
     z-index: -1;
     bottom: 0;
-    transform-origin: left bottom;
-    transform: skewY(3deg);
+    @include a.prefix(transform-origin, left bottom, ms moz webkit);
+    @include a.prefix(transform, skewY(3deg), ms moz webkit);
   }
 }
 
@@ -28,14 +30,16 @@
   justify-content: center;
   margin-bottom: 5em;
 }
-.projects {
+
+// list of projects with css grid
+.projects__list {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(1, 300px);
 
   grid-auto-rows: auto;
-  width: 300px;
-  .project {
+
+  .projects__project {
     display: flex;
     flex-direction: column;
 
@@ -43,11 +47,10 @@
       display: flex;
       justify-content: center;
 
-      .proj-img {
+      .projects__proj-img {
         border-radius: 50%;
         border: 5px solid black;
         max-width: 200px;
-
         aspect-ratio: 2/1;
         height: 200px;
       }
@@ -55,19 +58,21 @@
   }
 }
 
-.project__details {
+// project details and description
+.projects__project-details {
   display: flex;
   flex-direction: column;
   align-items: center;
-  .proj-description {
+  .projects__proj-description {
     margin-bottom: 5em;
     margin-top: 1em;
+    // display: contents;
     max-width: 75%;
     font-weight: 200;
   }
 }
 
-.project__header {
+.projects__project-header {
   margin-top: 1em;
   background: linear-gradient(360deg, transparent, #2196f3);
   padding: 0.4em;
@@ -78,27 +83,27 @@
 }
 
 @media screen and (min-width: 600px) {
-  .projects {
+  .projects__list {
     grid-template-columns: repeat(2, 300px);
 
-    .project {
+    .projects__project {
       margin-right: 1em;
     }
   }
 }
 
 @media screen and (min-width: 800px) {
-  .projects {
+  .projects__list {
     grid-template-columns: repeat(2, 400px);
   }
 }
 
 @media screen and (max-width: a.$xs-device-breakpoint) {
-  .projects-section {
+  .projects {
     padding-top: 0;
 
-    .projects {
-      .project {
+    .projects__list {
+      .projects__project {
         margin: 0 2em;
       }
     }

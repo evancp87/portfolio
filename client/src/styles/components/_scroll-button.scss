@@ -1,6 +1,7 @@
 @use '../abstracts' as a;
 
-.scroll-btn {
+// scroll button in footer component
+.ftr__scroll-btn {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -8,14 +9,13 @@
   color: a.$st-patricks-blue;
   cursor: pointer;
   margin-top: 3em;
-  -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
 
   &:hover {
     @include a.prefix(transform, translateY(-1em), moz webkit);
   }
 
-  > .scroll-button-arrow {
+  > .ftr__scroll-button-arrow {
     width: 100%;
     height: auto;
   }

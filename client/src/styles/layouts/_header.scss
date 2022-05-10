@@ -1,5 +1,8 @@
 @use '../abstracts' as a;
 
+// header section of portfolio page
+// ==============================================================
+
 .hdr {
   background-color: a.$st-patricks-blue;
   width: 100vw;
@@ -10,6 +13,8 @@
   z-index: 11;
   position: relative;
 }
+
+// header intro text- responsive with clamp()
 .hdr__intro {
   display: flex;
   flex-direction: column;

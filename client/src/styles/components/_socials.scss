@@ -1,8 +1,9 @@
 @use '../abstracts' as a;
 
+// fixed socials bar
 .socials {
   position: fixed;
-  top: 40%;
+  top: 50%;
   right: -10%;
   display: flex;
   flex-direction: column;
@@ -21,6 +22,7 @@
   }
 }
 
+// media queries keep the bar away from the content on different screen sizes
 @media screen and (min-width: 400px) {
   .socials {
     right: -5%;

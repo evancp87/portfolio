@@ -1,5 +1,6 @@
 @use '../abstracts' as a;
 
+// about section styles- slanted sections at top and bottom of page using before and after
 .about {
   width: 100vw;
   height: 100vh;
@@ -24,8 +25,8 @@
     background: inherit;
     z-index: -1;
     bottom: 0;
-    transform-origin: left bottom;
-    transform: skewY(3deg);
+    @include a.prefix(transform-origin, left bottom, ms moz webkit);
+    @include a.prefix(transform, skewY(3deg), ms moz webkit);
   }
   &:after {
     content: "";
@@ -35,30 +36,31 @@
     background: inherit;
     z-index: -1;
     bottom: 0;
-    transform-origin: right bottom;
-    transform: skewY(-3deg);
+    @include a.prefix(transform-origin, right bottom, ms moz webkit);
+    @include a.prefix(transform, skewY(-3deg), ms moz webkit);
   }
 }
 
-.text {
+// about text
+.about__text {
   font-size: clamp(0.6em, 1.5vw, 1.3em);
   padding: {
-    left: clamp(5em, 2vw, 10em);
-    right: clamp(5em, 2vw, 10em);
+    left: clamp(5em, 14vw, 10em);
+    right: clamp(5em, 14vw, 10em);
     top: 3em;
     bottom: 0;
   }
 }
 
 @media only screen and (min-width: a.$lg-computer-breakpoint) {
-  .text {
+  .about__text {
     font-size: 1.7em;
 
     padding: {
       top: 1em;
-      right: 10em;
+      right: 20em;
       bottom: 0;
-      left: 10em;
+      left: 20em;
     }
   }
 }

@@ -4,18 +4,19 @@ const About = () => {
   return (
     <section className="about " id="about">
       <h2 class="about__heading">About</h2>
-      <p class="text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sequi
-        temporibus placeat itaque consequatur dolore necessitatibus? Sint
-        laudantium dolore repellat neque similique minima esse commodi, illo
-        amet molestiae reiciendis. Pariatur. Similique corporis veritatis
-        repudiandae nostrum temporibus non odio. Molestias earum nobis
-        repudiandae accusamus, reprehenderit repellendus eaque, modi magnam
-        minus hic facilis veritatis non delectus mollitia porro? Voluptates
-        tenetur dolor natus. Deleniti voluptatibus recusandae dolorum veritatis!
-        Velit quam rerum reprehenderit corporis. Voluptas expedita eos velit
-        necessitatibus at eligendi dicta, eum sit vero dignissimos in laboriosam
-        exercitationem consectetur error dolores atque. Aperiam.
+      <p class="about__text">
+        My name is Evan Parker, and I like to design and build all kinds of
+        things. I use my skills to design, build, launch, and maintain apps and
+        websites from scratch, using multiples languages, libraries and
+        frameworks. I am a native Londoner, born and raised in this crazy,
+        wonderful city.
+        <br />
+        <br /> I am passionate about city life, travelling, art, culture,
+        technology and and all things digital. I am a wearer of many hats, and
+        my experience also includes scriptwriting, blogging, journalism, project
+        management in the arts and public sector. I have a passion for making
+        beautiful interfaces with excellent usability. I always seek to learn
+        new things and experiences.
       </p>
     </section>
   );

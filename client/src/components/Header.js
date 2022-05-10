@@ -1,10 +1,8 @@
 import React from "react";
-import { MdArrowRightAlt } from "react-icons/md";
-// import {ReactComponent } from '../assets/Images/brick-wall.jpg'
 import Avatar from "./Avatar";
 import NeonButton from "./NeonButton";
-import TypeWriterEffect from "react-typewriter-effect";
 
+// Header component- avatar and neon button nested button
 const Header = () => {
   return (
     <header className="hdr" id="header">
@@ -14,7 +12,6 @@ const Header = () => {
         </h1>
         <Avatar />
         <NeonButton />
-        {/* <button className="projects-link">See my work<MdArrowRightAlt/></button> */}
       </div>
     </header>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
-function ScrollButton() {
+const ScrollButton = () => {
   const [visible, setVisible] = useState(false);
 
   function toggleVisible() {
@@ -25,20 +25,15 @@ function ScrollButton() {
 
   return (
     <button
-      className="scroll-btn"
+      className="ftr__scroll-btn"
       onClick={scrollToTop}
       style={{
         display: visible ? "inline" : "none",
-        // border: "none",
-        // background: "none",
-        // width: "150px",
-        // height: "auto",
-        // transition: "1s",
       }}
     >
-      <BsFillArrowUpCircleFill className="scroll-button-arrow" />
+      <BsFillArrowUpCircleFill className="ftr__scroll-button-arrow" />
     </button>
   );
-}
+};
 
 export default ScrollButton;

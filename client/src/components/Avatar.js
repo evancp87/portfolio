@@ -1,33 +1,38 @@
 import React, { useState } from "react";
-const classNames= require('classnames');
+const classNames = require("classnames");
 
-function Avatar() {
+// avatar component
+const Avatar = () => {
+  // useState to set a boolean- default false
   const [isActive, setActive] = useState(false);
 
+  // updates state to true and sets a class below on click that transforms the image on its Y axis- creating a double sided image
   function flipImage() {
     setActive(!isActive);
   }
 
-  
   return (
-    <div className={classNames('avatar-container', isActive && "flip-img")} onClick={flipImage}>
-      <div className="card" title="Flip me">
-       
-          <img
-            src={require("../assets/Images/avatar.png")}
-            alt="Evan Parker avatar"
-            className=" front"
-          />
+    <div
+      className={classNames("avatar-container", isActive && "flip-img")}
+      onClick={flipImage}
+    >
+      {/* front face of avatar */}
+      <div className="avatar__card" title="Flip me">
+        <img
+          src={require("../assets/Images/avatar.png")}
+          alt="Evan Parker hdr avatar"
+          className=" avatar__front"
+        />
+        {/* back face of avatar */}
 
-          <img
-            src={require("../assets/Images/evan-portrait.jpeg")}
-            alt="Evan Parker avatar"
-            className=" back"
-          />
+        <img
+          src={require("../assets/Images/evan-portrait.jpeg")}
+          alt="Evan Parker back avatar"
+          className=" avatar__back"
+        />
       </div>
     </div>
   );
-}
+};
 
-// http://css3.bradshawenterprises.com/flip/#xandy
 export default Avatar;

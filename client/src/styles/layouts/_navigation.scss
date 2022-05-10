@@ -1,5 +1,7 @@
 @use '../abstracts' as a;
 
+// navigation bar styles
+// ==============================================================
 .navigation {
   display: flex;
   justify-content: space-evenly;
@@ -15,14 +17,15 @@
   z-index: 12;
   color: a.$grey;
 
-  .logo {
+  // nav logo
+  .navigation__logo {
     font-size: 1rem;
     font-family: "Shrikhand", cursive;
-    // display: flex;
-    // justify-content:space-between;
   }
 
-  .nav-items {
+  // nav items
+
+  .navigation__nav-items {
     display: contents;
     font-size: 0.7rem;
     margin: {
@@ -31,7 +34,7 @@
     transition: all 0.5s ease-in-out;
     cursor: pointer;
 
-    .nav-item {
+    .navigation__nav-item {
       > a {
         color: inherit;
         &:hover {
@@ -43,13 +46,13 @@
 }
 
 @media screen and (min-width: a.$xs-tablet-breakpoint) {
-  .nav-item {
+  .navigation__nav-item {
     font-size: 1rem;
   }
 }
 
 @media screen and (min-width: a.$xs-device-breakpoint) {
-  .logo {
+  .navigation__logo {
     font-size: 1rem;
   }
 }

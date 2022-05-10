@@ -1,20 +1,20 @@
 import React from "react";
 import { MdArrowRightAlt } from "react-icons/md";
 
-function NeonButton() {
+// Neon Button- uses spans for snake border effect on hover, along with an arrow from react icons
+const NeonButton = () => {
   return (
-    <button className="neon-button">
+    <button className="neon-btn-container">
       <a href="#projects" className="neon-btn">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         See my work
-        <MdArrowRightAlt className="arrow" />
+        <MdArrowRightAlt className="neon-btn__arrow" />
       </a>
     </button>
   );
-}
+};
 
-// https://www.youtube.com/watch?v=ex7jGbyFgpA&list=PLxdw55vilFza8S9E9YD2u-74CZH8s1SlW&index=196
 export default NeonButton;

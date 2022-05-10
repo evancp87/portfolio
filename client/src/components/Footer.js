@@ -1,39 +1,39 @@
 import React from "react";
-import ScrollButton from './ScrollButton';
+import ScrollButton from "./ScrollButton";
 
 const Footer = () => {
+  // dynamic data function for copyright
   const date = new Date();
   const year = date.getFullYear();
+
   return (
     <footer className="ftr">
-      <div className="ftr-info">
+      <div className="ftr__info">
         <div class="ftr__container">
+          {/* avatar img */}
           <img
-            className="ftr-avatar"
+            className="ftr__avatar"
             src={require("../assets/Images/footer-avatar.png")}
             alt="Evan Parker avatar"
           />
         </div>
-        <div className="copyright">
-
-        <p> Evan Parker ⓒ {year}</p>
-        <button className="contact-btn">
-
-        <a  href="mailto:evancp@hotmail.com?subject=🫱🏼‍🫲🏽 Let's work together!">
-          <div className="contact__btn-container">
-
-          <p className="contact__btn-text"> Contact Me</p>
-          </div>
-          <div className="contact__btn-inner">
-            <p className="contact__btn-inner-text">Now!</p>
-            </div>
-         
-          </a>
-        </button>
-        <ScrollButton/>
+        <div className="ftr__copyright">
+          <p> Evan Parker ⓒ {year}</p>
+          {/*  contact button*/}
+          <button className="ftr__contact-btn">
+            <a href="mailto:evancp@hotmail.com?subject=🫱🏼‍🫲🏽 Let's work together!">
+              <div className="ftr__contact-btn-container">
+                <p className="ftr__contact-btn-text"> Contact Me</p>
+              </div>
+              <div className="ftr__contact-btn-inner">
+                <p className="ftr__contact-btn-inner-text">Now!</p>
+              </div>
+            </a>
+          </button>
+          {/* scroll to top button- nested */}
+          <ScrollButton />
         </div>
       </div>
-      {/* <BsFillArrowUpCircleFill/> */}
     </footer>
   );
 };

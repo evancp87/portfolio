@@ -1,5 +1,6 @@
 @use '../abstracts' as a;
 
+// skills section- slanted top and bottom with before and after
 .skills {
   width: 100vw;
   height: auto;
@@ -16,8 +17,8 @@
     background: inherit;
     z-index: -1;
     bottom: 0;
-    transform-origin: right bottom;
-    transform: skewY(-3deg);
+    @include a.prefix(transform-origin, right bottom, ms moz webkit);
+    @include a.prefix(transform, skewY(-3deg), ms moz webkit);
   }
 }
 
@@ -27,11 +28,11 @@
   justify-content: center;
 }
 
+// list of skills with css grid
 .skills__list {
   display: grid;
   padding-top: 3em;
   grid-template-columns: repeat(1, 250px);
-
   justify-content: center;
   grid-row-gap: 3em;
   padding-bottom: 3em;
@@ -44,7 +45,6 @@
     .skills__icon-container {
       display: flex;
       justify-content: center;
-
       margin-bottom: 1em;
     }
     .skills__icon {
@@ -70,6 +70,7 @@
   }
 }
 
+// to add background for MongoDB icon, to make it the same style as the others
 .skills__item:nth-of-type(8) > .skills__icon-container {
   background: white;
   width: 100px;

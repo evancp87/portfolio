@@ -9,7 +9,7 @@ const Skill = (props) => {
       </div>
 
       <div className="skills__details">
-        <h2 class="skills__title"> {props.title}</h2>
+        <h2 className="skills__title"> {props.title}</h2>
         <p className="skills__description">{props.description}</p>
       </div>
     </li>

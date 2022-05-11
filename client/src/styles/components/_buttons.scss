@@ -7,88 +7,79 @@
 }
 
 // neon btn has four spans absolutely position and snake around the btn on hover
+
 .neon-btn {
   text-decoration: none;
   transition: 0.2s ease-in-out;
-  font-size: 1.5em;
-  color: #2196f3;
-  display: flex;
-  align-items: center;
+  font-size: #{$font-size-sm + 0.5};
+  color: $gradient-blue;
+  @include flexbox-config($align-items: center);
   position: relative;
   letter-spacing: 4px;
   overflow: hidden;
   padding: 15px 30px;
-  /* border-radius: 10px; */
 
-  span {
+  .snake {
     position: absolute;
     display: block;
   }
   &:hover {
-    color: #255784;
-    background-color: #2196f3;
-    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    color: $neon-btn-hover;
+    background-color: $gradient-blue;
+    box-shadow: $neon-btn;
     transition-delay: 1s;
 
     .neon-btn__arrow {
       transition-delay: 0.4s;
       transition: 0.6s;
-      transform: rotate(90deg);
+      @include prefix(transform, rotate(90deg), ms moz webkit);
     }
   }
 }
 
 // snake borders
-a span:nth-child(1) {
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #2196f3);
+.neon-btn .snake:nth-child(1) {
+  @include snakeBorders($top: 0, $left: -100%, $width: 100%, $height: 2px);
+
+  background: linear-gradient(90deg, transparent, $gradient-blue);
 }
 
-a:hover span:nth-of-type(1) {
+.neon-btn:hover .snake:nth-of-type(1) {
   left: 100%;
   transition: 1s;
 }
 
-a span:nth-child(3) {
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg, transparent, #2196f3);
+.neon-btn .snake:nth-child(3) {
+  @include snakeBorders($bottom: 0, $right: -100%, $width: 100%, $height: 2px);
+
+  background: linear-gradient(270deg, transparent, $gradient-blue);
 }
 
-a:hover span:nth-of-type(3) {
+.neon-btn:hover .snake:nth-of-type(3) {
   right: 100%;
   transition: 1s;
   transition-delay: 0.5s;
 }
 
-a span:nth-child(2) {
-  top: -100%;
-  right: 0;
-  width: 2px;
-  height: 10px;
-  background: linear-gradient(180deg, transparent, #2196f3);
+.neon-btn .snake:nth-child(2) {
+  @include snakeBorders($top: -100%, $right: 0, $width: 2px, $height: 10px);
+
+  background: linear-gradient(180deg, transparent, $gradient-blue);
 }
 
-a:hover span:nth-of-type(2) {
+.neon-btn:hover .snake:nth-of-type(2) {
   top: 100%;
   transition: 0.5s;
   transition-delay: 0.25s;
 }
 
-a span:nth-child(4) {
-  bottom: -100%;
-  left: 0;
-  width: 2px;
-  height: 10px;
-  background: linear-gradient(360deg, transparent, #2196f3);
+.neon-btn .snake:nth-child(4) {
+  @include snakeBorders($bottom: -100%, $left: 0, $width: 2px, $height: 10px);
+
+  background: linear-gradient(360deg, transparent, $gradient-blue);
 }
 
-a:hover span:nth-of-type(4) {
+.neon-btn:hover .snake:nth-of-type(4) {
   bottom: 100%;
   transition: 1s;
   transition-delay: 0.5s;

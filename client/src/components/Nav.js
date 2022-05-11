@@ -21,9 +21,9 @@ const Nav = () => {
           <a href="#about">About</a>
         </li>
         <li className="navigation__nav-item">
-          {/* <a href="#"> */}
-          CV
-          {/* </a> */}
+          <a href="../assets/pdfs/cv.pdf" target="_blank">
+            CV
+          </a>
         </li>
       </ul>
     </nav>

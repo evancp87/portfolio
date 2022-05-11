@@ -5,11 +5,13 @@
   width: 100vw;
   height: 100vh;
   background-color: a.$white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include a.flexbox-config(
+    $flex-direction: column,
+    $justify-content: center,
+    $align-items: center
+  );
 
+  // inherits flexbox properties from parent
   .ftr__intro {
     display: contents;
   }
@@ -27,9 +29,8 @@
 // ftr copyright
 .ftr__copyright {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2em;
+  @include a.flexbox-config($flex-direction: column, $align-items: center);
+  margin-top: a.$margin-em-spacing-md;
   .ftr__scroll-button {
     width: 100px;
     height: 100px;
@@ -42,7 +43,7 @@
   display: inline-block;
   width: 200px;
   height: 50px;
-  margin: 1em 0;
+  margin: a.$margin-em-spacing-sm 0;
   color: a.$grey;
   border-radius: 10px;
   position: relative;
@@ -68,7 +69,7 @@
 }
 
 .ftr__contact-btn-container {
-  margin-top: 1em;
+  margin-top: a.$margin-em-spacing-sm;
 }
 
 .ftr__contact-btn-inner {
@@ -81,14 +82,16 @@
   background: a.$red;
 
   .ftr__contact-btn-inner-text {
-    margin-top: 63px;
-    margin-right: -130px;
-    padding-top: 1.2em;
+    margin: {
+      top: 63px;
+      right: -130px;
+    }
+    padding-top: #{a.$padding-sm-em + 0.2};
     color: a.$grey;
   }
 }
 
-@media screen and (max-width: a.$md-tablet-breakpoint) {
+@media screen and (max-width: a.$sm-tablet-breakpoint-v2) {
   .ftr__container {
     display: flex;
     justify-content: center;

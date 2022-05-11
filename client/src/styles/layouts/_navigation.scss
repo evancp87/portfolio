@@ -3,15 +3,17 @@
 // navigation bar styles
 // ==============================================================
 .navigation {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  @include a.flexbox-config(
+    $justify-content: space-evenly,
+    $align-items: center
+  );
+
   background-color: a.$st-patricks-blue;
   position: fixed;
   width: 100vw;
   top: 0;
   left: 0;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid a.$black;
   height: 100px;
 
   z-index: 12;
@@ -19,7 +21,7 @@
 
   // nav logo
   .navigation__logo {
-    font-size: 1rem;
+    font-size: a.$font-size-sm-rem;
     font-family: "Shrikhand", cursive;
   }
 
@@ -27,9 +29,9 @@
 
   .navigation__nav-items {
     display: contents;
-    font-size: 0.7rem;
+    font-size: #{a.$font-size-sm-rem - 0.3};
     margin: {
-      right: 1em;
+      right: a.$margin-em-spacing-sm;
     }
     transition: all 0.5s ease-in-out;
     cursor: pointer;
@@ -45,14 +47,14 @@
   }
 }
 
-@media screen and (min-width: a.$xs-tablet-breakpoint) {
+@media screen and (min-width: a.$xs-tablet-breakpoint-v2) {
   .navigation__nav-item {
-    font-size: 1rem;
+    font-size: a.$font-size-sm-rem;
   }
 }
 
-@media screen and (min-width: a.$xs-device-breakpoint) {
+@media screen and (min-width: a.$xs-mobile-breakpoint) {
   .navigation__logo {
-    font-size: 1rem;
+    font-size: a.$font-size-sm-rem;
   }
 }

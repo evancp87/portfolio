@@ -5,14 +5,13 @@
   position: fixed;
   top: 50%;
   right: -10%;
-  display: flex;
-  flex-direction: column;
+  @include a.flexbox-config($flex-direction: column);
   z-index: 20;
-  margin: 2em;
+  margin: a.$margin-em-spacing-md;
 }
 
 .socials__item {
-  margin: 1em;
+  margin: a.$margin-em-spacing-sm;
   a {
     color: a.$black;
     transition: all 0.5s ease-in-out;
@@ -23,19 +22,19 @@
 }
 
 // media queries keep the bar away from the content on different screen sizes
-@media screen and (min-width: 400px) {
+@media screen and (min-width: a.$mobile-breakpoint) {
   .socials {
     right: -5%;
   }
 }
 
-@media screen and (min-width: a.$desktop-breakpoint) {
+@media screen and (min-width: a.$md-tablet-breakpoint) {
   .socials {
     right: -2.5%;
   }
 }
 
-@media screen and (max-width: a.$xs-device-breakpoint) {
+@media screen and (max-width: a.$xs-mobile-breakpoint) {
   .socials {
     position: relative;
     top: -100px;
@@ -44,8 +43,13 @@
     justify-content: center;
 
     :only-child {
-      display: flex;
-      justify-content: center;
+      @include a.flexbox-config($justify-content: center);
     }
+  }
+}
+
+@media screen and (min-width: a.$lg-computer-breakpoint) {
+  .socials {
+    right: 1.5%;
   }
 }

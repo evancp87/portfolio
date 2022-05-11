@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="ftr">
       <div className="ftr__info">
-        <div class="ftr__container">
+        <div className="ftr__container">
           {/* avatar img */}
           <img
             className="ftr__avatar"

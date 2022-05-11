@@ -6,10 +6,10 @@ const NeonButton = () => {
   return (
     <button className="neon-btn-container">
       <a href="#projects" className="neon-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+        <span className="snake"></span>
+        <span className="snake"></span>
+        <span className="snake"></span>
+        <span className="snake"></span>
         See my work
         <MdArrowRightAlt className="neon-btn__arrow" />
       </a>

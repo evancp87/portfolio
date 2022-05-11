@@ -1,11 +1,12 @@
 @use '../abstracts' as a;
 
 // double sided avatar image
+
 .avatar-container {
   position: relative;
   z-index: 30;
   perspective: 1000px;
-  margin-bottom: 3em;
+  margin-bottom: #{a.$margin-em-spacing-sm * 3};
   max-width: 400px;
   display: block;
   width: 200px;
@@ -47,7 +48,7 @@
   box-sizing: border-box;
 }
 
-@media only screen and (max-width: a.$md-tablet-breakpoint) {
+@media only screen and (max-width: a.$sm-tablet-breakpoint-v2) {
   .avatar-container {
     width: 150px;
     height: 150px;

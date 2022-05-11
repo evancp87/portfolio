@@ -1,14 +1,94 @@
-// @mixin button-styles($color, $text-decoration, $font-size) {
-//     color: $color;
-//     text-decoration: $text-decoration;
-//     font-size: $font-size;
-//   }
-
 // vendor prefix mixin
 
 @mixin prefix($property, $value, $prefixes: ()) {
   @each $prefix in $prefixes {
     #{"-" + $prefix + "-" + $property}: $value;
     #{$property}: $value;
+  }
+}
+
+// mixin for writing flexbox DRY
+@mixin flexbox-config(
+  $justify-content: false,
+  $flex: false,
+  $flex-direction: false,
+  $align-items: false
+) {
+  display: flex;
+
+  @if $justify-content != false {
+    justify-content: $justify-content;
+  }
+
+  @if $flex != false {
+    flex: $flex;
+  }
+
+  @if $flex-direction != false {
+    flex-direction: $flex-direction;
+  }
+
+  @if $align-items != false {
+    align-items: $align-items;
+  }
+}
+
+@mixin mediaQuery() {
+}
+
+// For slanted sections- section tag
+@mixin slantedSection($width, $height, $background-color, $position, $z-index) {
+  width: $width;
+  height: $height;
+  background-color: $background-color;
+  position: $position;
+  z-index: $z-index;
+}
+
+// For slanted sections using the :after pseudo class
+@mixin slantedSectionAfter(
+  $content,
+  $width,
+  $height,
+  $position,
+  $background,
+  $z-index,
+  $bottom
+) {
+  content: $content;
+  width: $width;
+  height: $height;
+  position: $position;
+  background: $background;
+  z-index: $z-index;
+  bottom: $bottom;
+}
+
+// mixing for neon btn snake borders
+
+@mixin snakeBorders(
+  $top: false,
+  $bottom: false,
+  $left: false,
+  $right: false,
+  $width,
+  $height
+) {
+  width: $width;
+  height: $height;
+  @if $top != false {
+    top: $top;
+  }
+
+  @if $left != false {
+    left: $left;
+  }
+
+  @if $right != false {
+    right: $right;
+  }
+
+  @if $bottom != false {
+    bottom: $bottom;
   }
 }

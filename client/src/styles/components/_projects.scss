@@ -3,32 +3,23 @@
 // project section- slanted top and bottom with before and after
 
 .projects {
-  background-color: a.$white;
-  width: 100vw;
-  position: relative;
-  z-index: 10;
+  @include a.slantedSection(100vw, auto, a.$white, relative, 10);
 
   padding: {
-    top: 7em;
-    bottom: 5em;
+    top: #{a.$padding-sm-em * 7};
+    bottom: #{a.$padding-sm-em * 5};
   }
   &:after {
-    content: "";
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    background: inherit;
-    z-index: -1;
-    bottom: 0;
+    @include a.slantedSectionAfter("", 100vw, 100vh, absolute, inherit, -1, 0);
+
     @include a.prefix(transform-origin, left bottom, ms moz webkit);
     @include a.prefix(transform, skewY(3deg), ms moz webkit);
   }
 }
 
 .projects__header {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5em;
+  @include a.flexbox-config($justify-content: center);
+  margin-bottom: #{a.$margin-em-spacing-sm * 5};
 }
 
 // list of projects with css grid
@@ -36,16 +27,13 @@
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(1, 300px);
-
   grid-auto-rows: auto;
 
   .projects__project {
-    display: flex;
-    flex-direction: column;
+    @include a.flexbox-config($flex-direction: column);
 
     .projects__proj-img-container {
-      display: flex;
-      justify-content: center;
+      @include a.flexbox-config($justify-content: center);
 
       .projects__proj-img {
         border-radius: 50%;
@@ -60,12 +48,12 @@
 
 // project details and description
 .projects__project-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include a.flexbox-config($flex-direction: column, $align-items: center);
   .projects__proj-description {
-    margin-bottom: 5em;
-    margin-top: 1em;
+    margin: {
+      bottom: #{a.$margin-em-spacing-sm * 5};
+      top: a.$margin-em-spacing-sm;
+    }
     line-height: 1.5em;
     max-width: 75%;
     font-weight: 200;
@@ -73,38 +61,38 @@
 }
 
 .projects__project-header {
-  margin-top: 1em;
-  background: linear-gradient(360deg, transparent, #2196f3);
-  padding: 0.4em;
+  margin-top: a.$margin-em-spacing-sm;
+  background: linear-gradient(360deg, transparent, a.$gradient-blue);
+  padding: #{a.$padding-xs-em - 0.1};
   > .project__header-title {
     font-weight: 400;
     white-space: nowrap;
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: a.$sm-tablet-breakpoint) {
   .projects__list {
     grid-template-columns: repeat(2, 300px);
 
     .projects__project {
-      margin-right: 1em;
+      margin-right: a.$margin-em-spacing-sm;
     }
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: a.$lg-tablet-breakpoint) {
   .projects__list {
     grid-template-columns: repeat(2, 400px);
   }
 }
 
-@media screen and (max-width: a.$xs-device-breakpoint) {
+@media screen and (max-width: a.$xs-mobile-breakpoint) {
   .projects {
     padding-top: 0;
 
     .projects__list {
       .projects__project {
-        margin: 0 2em;
+        margin: 0 a.$margin-em-spacing-md;
       }
     }
   }

@@ -450,9 +450,8 @@ main {
   letter-spacing: 4px;
   overflow: hidden;
   padding: 15px 30px;
-  /* border-radius: 10px; */
 }
-.neon-btn span {
+.neon-btn .snake {
   position: absolute;
   display: block;
 }
@@ -465,59 +464,64 @@ main {
 .neon-btn:hover .neon-btn__arrow {
   transition-delay: 0.4s;
   transition: 0.6s;
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-a span:nth-child(1) {
-  top: 0;
-  left: -100%;
+.neon-btn .snake:nth-child(1) {
   width: 100%;
   height: 2px;
+  top: 0;
+  left: -100%;
   background: linear-gradient(90deg, transparent, #2196f3);
 }
 
-a:hover span:nth-of-type(1) {
+.neon-btn:hover .snake:nth-of-type(1) {
   left: 100%;
   transition: 1s;
 }
 
-a span:nth-child(3) {
-  bottom: 0;
-  right: -100%;
+.neon-btn .snake:nth-child(3) {
   width: 100%;
   height: 2px;
+  right: -100%;
+  bottom: 0;
   background: linear-gradient(270deg, transparent, #2196f3);
 }
 
-a:hover span:nth-of-type(3) {
+.neon-btn:hover .snake:nth-of-type(3) {
   right: 100%;
   transition: 1s;
   transition-delay: 0.5s;
 }
 
-a span:nth-child(2) {
-  top: -100%;
-  right: 0;
+.neon-btn .snake:nth-child(2) {
   width: 2px;
   height: 10px;
+  top: -100%;
+  right: 0;
   background: linear-gradient(180deg, transparent, #2196f3);
 }
 
-a:hover span:nth-of-type(2) {
+.neon-btn:hover .snake:nth-of-type(2) {
   top: 100%;
   transition: 0.5s;
   transition-delay: 0.25s;
 }
 
-a span:nth-child(4) {
-  bottom: -100%;
-  left: 0;
+.neon-btn .snake:nth-child(4) {
   width: 2px;
   height: 10px;
+  left: 0;
+  bottom: -100%;
   background: linear-gradient(360deg, transparent, #2196f3);
 }
 
-a:hover span:nth-of-type(4) {
+.neon-btn:hover .snake:nth-of-type(4) {
   bottom: 100%;
   transition: 1s;
   transition-delay: 0.5s;
@@ -544,7 +548,7 @@ a:hover span:nth-of-type(4) {
 .skills {
   width: 100vw;
   height: auto;
-  background-color: red;
+  background-color: #ff0000;
   position: relative;
   z-index: 9;
 }
@@ -553,7 +557,7 @@ a:hover span:nth-of-type(4) {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  background: inherit;
+  background: #ff0000;
   z-index: -1;
   bottom: 0;
   -ms-transform-origin: right bottom;
@@ -616,7 +620,7 @@ a:hover span:nth-of-type(4) {
 }
 
 .skills__item:nth-of-type(8) > .skills__icon-container {
-  background: white;
+  background: #fff;
   width: 100px;
   border-radius: 50%;
   height: auto;
@@ -635,12 +639,13 @@ a:hover span:nth-of-type(4) {
 }
 @media screen and (max-width: 300px) {
   .skills__details .skills__description {
-    margin: 1em 1em;
+    margin: 1em;
   }
 }
 .projects {
-  background-color: #fff;
   width: 100vw;
+  height: auto;
+  background-color: #fff;
   position: relative;
   z-index: 10;
   padding-top: 7em;
@@ -805,6 +810,11 @@ a:hover span:nth-of-type(4) {
     justify-content: center;
   }
 }
+@media screen and (min-width: 1800px) {
+  .socials {
+    right: 1.5%;
+  }
+}
 .navigation {
   display: flex;
   justify-content: space-evenly;
@@ -852,8 +862,8 @@ a:hover span:nth-of-type(4) {
   height: 100vh;
   background-color: #fff;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 .ftr .ftr__intro {
@@ -869,6 +879,7 @@ a:hover span:nth-of-type(4) {
 }
 
 .ftr__copyright {
+  display: flex;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -953,8 +964,8 @@ a:hover span:nth-of-type(4) {
 
 .hdr__intro {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 .hdr__intro .hdr__intro-heading {
@@ -963,26 +974,21 @@ a:hover span:nth-of-type(4) {
   font-size: clamp(0.5rem, 5vw, 4rem);
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 600px) {
   .hdr .hdr__intro-heading {
     padding-top: 5rem;
     color: #eae7e7;
-  }
-}
-@media only screen and (min-width: 1800px) {
-  .hdr {
-    align-items: center;
   }
 }
 .about {
   width: 100vw;
   height: 100vh;
   background-color: #cfd7de;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   position: relative;
   z-index: 8;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   padding-top: 1em;
 }
 .about .about__heading {

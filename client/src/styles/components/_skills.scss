@@ -25,6 +25,15 @@
   grid-row-gap: 3em;
   padding-bottom: 3em;
 
+  @include a.lg-tablets {
+    grid-template-columns: repeat(2, 300px);
+  }
+  @include a.xl-tablets {
+    display: grid;
+
+    grid-template-columns: repeat(3, 300px);
+  }
+
   .skills__item {
     @include a.flexbox-config($flex-direction: column, $align-items: center);
 
@@ -44,7 +53,7 @@
   display: contents;
 
   .skills__title {
-    background: linear-gradient(360deg, transparent, a.$gradient-blue);
+    background: a.$gradient-header;
     padding: 0.5em;
     font-weight: 400;
   }
@@ -53,6 +62,9 @@
     margin-top: a.$margin-em-spacing-sm;
     font-weight: 200;
     line-height: 1.5em;
+    @include a.extra-sm-phones-max {
+      margin: a.$margin-em-spacing-sm;
+    }
   }
 }
 
@@ -62,26 +74,4 @@
   width: 100px;
   border-radius: 50%;
   height: auto;
-}
-
-@media screen and (min-width: a.$lg-tablet-breakpoint) {
-  .skills__list {
-    grid-template-columns: repeat(2, 300px);
-  }
-}
-
-@media screen and (min-width: a.$xl-tablet-breakpoint) {
-  .skills__list {
-    display: grid;
-
-    grid-template-columns: repeat(3, 300px);
-  }
-}
-
-@media screen and (max-width: a.$xs-mobile-breakpoint) {
-  .skills__details {
-    .skills__description {
-      margin: a.$margin-em-spacing-sm;
-    }
-  }
 }

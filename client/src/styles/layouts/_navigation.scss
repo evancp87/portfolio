@@ -23,6 +23,10 @@
   .navigation__logo {
     font-size: a.$font-size-sm-rem;
     font-family: "Shrikhand", cursive;
+
+    @include a.extra-sm-phones {
+      font-size: a.$font-size-sm-rem;
+    }
   }
 
   // nav items
@@ -37,6 +41,9 @@
     cursor: pointer;
 
     .navigation__nav-item {
+      @include a.xs-tablets-v2 {
+        font-size: a.$font-size-sm-rem;
+      }
       > a {
         color: inherit;
         &:hover {
@@ -44,17 +51,5 @@
         }
       }
     }
-  }
-}
-
-@media screen and (min-width: a.$xs-tablet-breakpoint-v2) {
-  .navigation__nav-item {
-    font-size: a.$font-size-sm-rem;
-  }
-}
-
-@media screen and (min-width: a.$xs-mobile-breakpoint) {
-  .navigation__logo {
-    font-size: a.$font-size-sm-rem;
   }
 }

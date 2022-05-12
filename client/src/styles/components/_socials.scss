@@ -8,34 +8,7 @@
   @include a.flexbox-config($flex-direction: column);
   z-index: 20;
   margin: a.$margin-em-spacing-md;
-}
-
-.socials__item {
-  margin: a.$margin-em-spacing-sm;
-  a {
-    color: a.$black;
-    transition: all 0.5s ease-in-out;
-    &:hover {
-      color: scale-color($color: a.$black, $lightness: +80%);
-    }
-  }
-}
-
-// media queries keep the bar away from the content on different screen sizes
-@media screen and (min-width: a.$mobile-breakpoint) {
-  .socials {
-    right: -5%;
-  }
-}
-
-@media screen and (min-width: a.$md-tablet-breakpoint) {
-  .socials {
-    right: -2.5%;
-  }
-}
-
-@media screen and (max-width: a.$xs-mobile-breakpoint) {
-  .socials {
+  @include a.extra-sm-phones-max {
     position: relative;
     top: -100px;
     right: 0;
@@ -46,10 +19,32 @@
       @include a.flexbox-config($justify-content: center);
     }
   }
+  @include a.main-phone-breakpoint {
+    right: -5%;
+  }
+  @include a.xs-tablets {
+    right: -8%;
+  }
+
+  @include a.sm-tablets {
+    right: -4%;
+  }
+
+  @include a.md-tablets {
+    right: -2.5%;
+  }
+  @include a.xl-screens {
+    right: 1.5%;
+  }
 }
 
-@media screen and (min-width: a.$lg-computer-breakpoint) {
-  .socials {
-    right: 1.5%;
+.socials__item {
+  margin: a.$margin-em-spacing-sm;
+  a {
+    color: a.$black;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      color: scale-color($color: a.$black, $lightness: +80%);
+    }
   }
 }

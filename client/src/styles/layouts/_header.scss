@@ -25,12 +25,8 @@
     padding-top: a.$padding-lg-screen-lg-rem;
     color: a.$grey-text;
     font-size: clamp(0.5rem, 5vw, 4rem);
-  }
-}
 
-@media only screen and (min-width: a.$sm-tablet-breakpoint) {
-  .hdr {
-    .hdr__intro-heading {
+    @include a.sm-tablets {
       padding-top: a.$padding-lg-screen;
       color: a.$grey-text;
     }

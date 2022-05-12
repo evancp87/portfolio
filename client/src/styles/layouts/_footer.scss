@@ -24,6 +24,12 @@
   height: auto;
   border-radius: 50%;
   border: 5px solid a.$black;
+
+  @include a.xl-screens {
+    width: 400px;
+    display: block;
+    height: 400px;
+  }
 }
 
 // ftr copyright
@@ -91,21 +97,13 @@
   }
 }
 
-@media screen and (max-width: a.$sm-tablet-breakpoint-v2) {
-  .ftr__container {
-    display: flex;
-    justify-content: center;
+.ftr__container {
+  display: flex;
+  justify-content: center;
 
-    > .ftr__avatar {
+  > .ftr__avatar {
+    @include a.sm-tablets-max-width {
       max-width: 150px;
     }
-  }
-}
-
-@media only screen and (min-width: a.$lg-computer-breakpoint) {
-  .ftr__avatar {
-    width: 400px;
-    display: block;
-    height: 400px;
   }
 }

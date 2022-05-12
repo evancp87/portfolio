@@ -9,6 +9,10 @@
     top: #{a.$padding-sm-em * 7};
     bottom: #{a.$padding-sm-em * 5};
   }
+  @include a.extra-sm-phones-max {
+    padding-top: 0;
+  }
+
   &:after {
     @include a.slantedSectionAfter("", 100vw, 100vh, absolute, inherit, -1, 0);
 
@@ -28,9 +32,23 @@
   justify-content: center;
   grid-template-columns: repeat(1, 300px);
   grid-auto-rows: auto;
+  @include a.sm-tablets {
+    grid-template-columns: repeat(2, 300px);
+  }
+
+  @include a.lg-tablets {
+    grid-template-columns: repeat(2, 400px);
+  }
 
   .projects__project {
     @include a.flexbox-config($flex-direction: column);
+    @include a.extra-sm-phones-max {
+      margin: 0 a.$margin-em-spacing-md;
+    }
+
+    @include a.sm-tablets {
+      margin-right: a.$margin-em-spacing-sm;
+    }
 
     .projects__proj-img-container {
       @include a.flexbox-config($justify-content: center);
@@ -62,38 +80,10 @@
 
 .projects__project-header {
   margin-top: a.$margin-em-spacing-sm;
-  background: linear-gradient(360deg, transparent, a.$gradient-blue);
+  background: a.$gradient-header;
   padding: #{a.$padding-xs-em - 0.1};
   > .project__header-title {
     font-weight: 400;
     white-space: nowrap;
-  }
-}
-
-@media screen and (min-width: a.$sm-tablet-breakpoint) {
-  .projects__list {
-    grid-template-columns: repeat(2, 300px);
-
-    .projects__project {
-      margin-right: a.$margin-em-spacing-sm;
-    }
-  }
-}
-
-@media screen and (min-width: a.$lg-tablet-breakpoint) {
-  .projects__list {
-    grid-template-columns: repeat(2, 400px);
-  }
-}
-
-@media screen and (max-width: a.$xs-mobile-breakpoint) {
-  .projects {
-    padding-top: 0;
-
-    .projects__list {
-      .projects__project {
-        margin: 0 a.$margin-em-spacing-md;
-      }
-    }
   }
 }

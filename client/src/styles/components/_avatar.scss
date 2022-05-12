@@ -13,6 +13,16 @@
   height: 200px;
   cursor: pointer;
 
+  @include a.sm-tablets-v2 {
+    width: 150px;
+    height: 150px;
+  }
+  @include a.xl-screens {
+    width: 400px;
+    display: block;
+    height: 400px;
+  }
+
   // preserve-3d to get sense of perspective as img rotates
   .avatar__card {
     width: 100%;
@@ -46,19 +56,4 @@
   display: block;
   @include a.prefix(transform, rotateY(180deg), ms moz webkit);
   box-sizing: border-box;
-}
-
-@media only screen and (max-width: a.$sm-tablet-breakpoint-v2) {
-  .avatar-container {
-    width: 150px;
-    height: 150px;
-  }
-}
-
-@media only screen and (min-width: a.$lg-computer-breakpoint) {
-  .avatar-container {
-    width: 400px;
-    display: block;
-    height: 400px;
-  }
 }

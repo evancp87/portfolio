@@ -13,7 +13,7 @@ export const SkillInfo = [
     title: "JavaScript",
     image: javascriptIcon,
     description:
-      "I have strong knowledge of JavaScript, including programming paradigms like functional programming and object oriented programming, the latest ES6+ syntax, as well as advanced concepts like higher order functions, async-await and promises.",
+      "I have strong knowledge of JavaScript, including programming paradigms like functional programming and object oriented programming, the latest ES6+ syntax, as well as advanced concepts like higher order functions, async-await and promises. I also understand JQuery. ",
   },
   {
     title: "Node JS",

@@ -23,6 +23,9 @@
   .navigation__logo {
     font-size: a.$font-size-sm-rem;
     font-family: "Shrikhand", cursive;
+    border: 1px solid a.$grey;
+    border-radius: 50%;
+    padding: 1em;
 
     @include a.extra-sm-phones {
       font-size: a.$font-size-sm-rem;

@@ -14,6 +14,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.send("index.html");
+  // console.log("hello world");
 });
 // app.get('/api', (req, res) => {
 //     res.json({message: 'Hello from server!'});

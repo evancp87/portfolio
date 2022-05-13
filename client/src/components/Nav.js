@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <nav className="navigation">
       <ul>
-        <li className="navigation__logo navigation__nav-item">Evan Parker</li>
+        <li className="navigation__logo navigation__nav-item">EP</li>
       </ul>
       <ul className="navigation__nav-items">
         <li className="navigation__nav-item">
@@ -21,7 +21,7 @@ const Nav = () => {
           <a href="#about">About</a>
         </li>
         <li className="navigation__nav-item">
-          <a href="../assets/pdfs/cv.pdf" target="_blank">
+          <a href="pdfs/cv.pdf" target="_blank">
             CV
           </a>
         </li>

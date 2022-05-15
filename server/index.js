@@ -13,7 +13,7 @@ const app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
-  res.send("index.html");
+  res.send(__dirname + "index.html");
   // console.log("hello world");
 });
 // app.get('/api', (req, res) => {

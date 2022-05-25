@@ -9,13 +9,16 @@ import Socials from "./components/Socials";
 import Skills from "./components/Skills";
 
 function App() {
-  // const [data, setData] = React.useState(null);
+  //   const [data, setData] = useState({});
 
-  // React.useEffect(() => {
-  //   fetch("/api")
-  //     .then((res) => res.json())
-  //     .then((data) => setData(data.message));
-  // }, []);
+  //   function getData() {
+
+  //     useEffect(() => {
+  //       fetch("/")
+  //       .then((res) => res.json())
+  //       .then((data) => setData(data));
+  //     }, []);
+  //   }
 
   return (
     <main className="App">

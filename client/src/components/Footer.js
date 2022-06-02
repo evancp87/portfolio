@@ -32,16 +32,16 @@ const Footer = () => {
           </button>
           {/* scroll to top button- nested */}
           <ScrollButton />
-          {/* Accreditation for Flaticon icons */}
-          <a
-            href="https://www.flaticon.com/icons"
-            title="Flaticon icons"
-            class="ftr__accreditation"
-          >
-            Skill icons created by Freepik - Flaticon
-          </a>
         </div>
       </div>
+      {/* Accreditation for Flaticon icons */}
+      <a
+        href="https://www.flaticon.com/icons"
+        title="Flaticon icons"
+        class="ftr__accreditation"
+      >
+        Skill icons created by Freepik - Flaticon
+      </a>
     </footer>
   );
 };

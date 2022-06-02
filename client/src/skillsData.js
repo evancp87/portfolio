@@ -7,6 +7,8 @@ const nodeJSIcon = require("./assets/Images/nodejs.png");
 const reactIcon = require("./assets/Images/react.png");
 const sassIcon = require("./assets/Images/sass.png");
 const sqlIcon = require("./assets/Images/sql.png");
+const pythonIcon = require("./assets/Images/python.png");
+const figmaIcon = require("./assets/Images/figma.png");
 
 export const SkillInfo = [
   {
@@ -62,5 +64,18 @@ export const SkillInfo = [
     image: sqlIcon,
     description:
       "I use MYSQL and MYSQL Workbench to build databases, alongside Node Express and React.",
+  },
+
+  {
+    title: "Python",
+    image: pythonIcon,
+    description:
+      "A recent addition to my tech stack, I have an understanding of the basics, such as working with lists and dictionaries, OOP and classes, alongside knowledge of libraries like Pandas, Numpy and Matsplotlib, basic machine learning and data science concepts. I intend to learn Django in the near future",
+  },
+  {
+    title: "Figma",
+    image: figmaIcon,
+    description:
+      "I am able to use Figma to build user flows, sitemaps, wireframes and prototypes, building resuable components, ui, color and design styles and able to demonstrate app functionality using presentation mode with smart animations",
   },
 ];

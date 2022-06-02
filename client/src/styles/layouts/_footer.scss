@@ -15,6 +15,11 @@
   .ftr__intro {
     display: contents;
   }
+  .ftr__accreditation {
+    margin-top: 5em;
+    font-size: 0.7em;
+    color: a.$black;
+  }
 }
 
 // footer avatar image
@@ -106,9 +111,4 @@
       max-width: 150px;
     }
   }
-}
-
-.ftr__accreditation {
-  margin-top: 5em;
-  color: black;
 }

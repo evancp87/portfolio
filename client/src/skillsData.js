@@ -76,6 +76,6 @@ export const SkillInfo = [
     title: "Figma",
     image: figmaIcon,
     description:
-      "I am able to use Figma to build user flows, sitemaps, wireframes and prototypes, building resuable components, ui, color and design styles and able to demonstrate app functionality using presentation mode with smart animations",
+      "I am able to use Figma to build user flows, sitemaps, wireframes and prototypes, building resuable components, ui, color and design styles. I am able to demonstrate app functionality using presentation mode with smart animations",
   },
 ];

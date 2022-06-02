@@ -35,13 +35,11 @@ const Footer = () => {
         </div>
       </div>
       {/* Accreditation for Flaticon icons */}
-      <a
-        href="https://www.flaticon.com/icons"
-        title="Flaticon icons"
-        class="ftr__accreditation"
-      >
-        Skill icons created by Freepik - Flaticon
-      </a>
+      <div class="ftr__accreditation">
+        <a href="https://www.flaticon.com/icons" title="Flaticon icons">
+          Skill icons created by Freepik - Flaticon
+        </a>
+      </div>
     </footer>
   );
 };

@@ -1,0 +1,43 @@
+@use "../abstracts" as *;
+
+:root {
+  --main-light-color: #6290c3;
+  --text: #fff;
+}
+
+.thought-bubble {
+  display: none;
+
+  @include lg-tablets {
+    height: 80px;
+    width: 200px;
+    background-color: var(--main-light-color);
+    position: absolute;
+    border-radius: 10%;
+    left: 74%;
+    box-shadow: 0px 1px 20px grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .thought-bubble__point {
+      width: 0;
+      height: 0;
+      rotate: 60deg;
+      border-left: 2vh solid transparent;
+      border-right: 1vh solid transparent;
+      border-top: 12vh solid var(--main-light-color);
+      position: relative;
+      top: 60%;
+      left: -20%;
+    }
+
+    .thought-bubble__txt {
+      color: $grey-text;
+      //   padding-left: 0.6em;
+    }
+  }
+  @include desktop {
+    left: 70%;
+  }
+}

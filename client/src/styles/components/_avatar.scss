@@ -1,4 +1,4 @@
-@use '../abstracts' as a;
+@use "../abstracts" as a;
 
 // double sided avatar image
 
@@ -16,6 +16,10 @@
   @include a.sm-tablets-v2 {
     width: 150px;
     height: 150px;
+  }
+  @include a.xl-tablets {
+    width: 300px;
+    height: 300px;
   }
   @include a.xl-screens {
     width: 400px;

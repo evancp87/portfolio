@@ -1,5 +1,6 @@
 import React from "react";
 import ScrollButton from "./ScrollButton";
+import LazyLoad from "react-lazyload";
 
 const Footer = () => {
   // dynamic data function for copyright
@@ -11,11 +12,13 @@ const Footer = () => {
       <div className="ftr__info">
         <div className="ftr__container">
           {/* avatar img */}
-          <img
-            className="ftr__avatar"
-            src={require("../assets/Images/footer-avatar.png")}
-            alt="Evan Parker avatar"
-          />
+          <LazyLoad offset={100}>
+            <img
+              className="ftr__avatar"
+              src={require("../assets/Images/footer-avatar.png")}
+              alt="Evan Parker avatar"
+            />
+          </LazyLoad>
         </div>
         <div className="ftr__copyright">
           <p> Evan Parker ⓒ {year}</p>
@@ -35,7 +38,7 @@ const Footer = () => {
         </div>
       </div>
       {/* Accreditation for Flaticon icons */}
-      <div class="ftr__accreditation">
+      <div className="ftr__accreditation">
         <a href="https://www.flaticon.com/icons" title="Flaticon icons">
           Skill icons created by Freepik - Flaticon
         </a>

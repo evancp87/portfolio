@@ -1,0 +1,135 @@
+@use '../abstracts' as *;
+
+.loader-container {
+  width: 200px;
+  height: 200px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+
+  .block {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+  }
+}
+
+.block-one {
+  background: green;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  @include prefix(
+    animation,
+    block-one-move 1.8s cubic-bezier(0.6, 0.01, 0.4, 1) infinite,
+    ms webkit moz
+  );
+  //  animation: block-one-move 1.8s cubic-bezier(.6, .01, .4,1) infinite;
+}
+
+.block-two {
+  background: purple;
+  top: 0;
+  right: 0;
+  @include prefix(
+    animation,
+    block-two-move 1.8s cubic-bezier(0.6, 0.01, 0.4, 1) infinite,
+    ms webkit moz
+  );
+
+  //  animation: block-two-move 1.8s cubic-bezier(.6, .01, .4,1) infinite;
+}
+
+.block-three {
+  background: blue;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  @include prefix(
+    animation,
+    block-three-move 1.8s cubic-bezier(0.6, 0.01, 0.4, 1) infinite,
+    ms webkit moz
+  );
+
+  //  animation: block-three-move 1.8s cubic-bezier(.6, .01, .4,1) infinite;
+}
+
+.block-four {
+  background: yellow;
+  bottom: 0;
+  left: 0;
+  @include prefix(
+    animation,
+    block-four-move 1.8s cubic-bezier(0.6, 0.01, 0.4, 1) infinite,
+    ms webkit moz
+  );
+
+  //  animation: block-four-move 1.8s cubic-bezier(.6, .01, .4,1) infinite;
+}
+
+@keyframes block-one-move {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, 100px);
+  }
+  50% {
+    transform: translate(100px, 100px);
+  }
+  75% {
+    transform: translate(100px, 0);
+  }
+}
+
+@keyframes block-two-move {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-100px, 0);
+  }
+  50% {
+    transform: translate(-100px, 100px);
+  }
+  75% {
+    transform: translate(0, 100px);
+  }
+}
+
+@keyframes block-three-move {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, -100px);
+  }
+  50% {
+    transform: translate(-100px, -100px);
+  }
+  75% {
+    transform: translate(-100px, 0);
+  }
+}
+
+@keyframes block-four-move {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100px, 0);
+  }
+  50% {
+    transform: translate(100px, -100px);
+  }
+  75% {
+    transform: translate(0, -100px);
+  }
+}

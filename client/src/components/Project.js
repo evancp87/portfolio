@@ -1,14 +1,18 @@
 import React from "react";
+import LazyLoad from "react-lazyload";
+
 const Project = (props) => {
   return (
     <li key={props.index} className="projects__project">
       <div className="projects__proj-img-container">
         <a href={props.link}>
-          <img
-            src={props.image}
-            alt={props.title}
-            className="projects__proj-img"
-          />
+          <LazyLoad offset={100}>
+            <img
+              src={props.image}
+              alt={props.title}
+              className="projects__proj-img"
+            />
+          </LazyLoad>
         </a>
       </div>
       <div className="projects__project-details">

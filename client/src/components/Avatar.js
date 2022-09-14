@@ -26,7 +26,7 @@ const Avatar = () => {
         {/* back face of avatar */}
 
         <img
-          src={require("../assets/Images/evan-portrait.jpeg")}
+          src={require("../assets/Images/evan-portrait.png")}
           alt="Evan Parker back avatar"
           className=" avatar__back"
         />

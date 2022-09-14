@@ -1,7 +1,7 @@
 const homebrew = require("./assets/Images/homebrew.png");
 const wyr = require("./assets/Images/would-you-rather.png");
 const mars = require("./assets/Images/mars-dashboard.png");
-const FEM = require("./assets/Images/frontendmentor.jpeg");
+const FEM = require("./assets/Images/frontendmentor.png");
 export const projects = [
   {
     title: "HomeBrew",

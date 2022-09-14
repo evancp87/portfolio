@@ -1,11 +1,19 @@
-@use '../abstracts' as a;
+@use "../abstracts" as a;
 
 // skills section- slanted top and bottom with before and after
 .skills {
-  @include a.slantedSection(100vw, auto, a.$red, relative, 9);
+  @include a.slantedSection(100vw, auto, a.$skills-blue, relative, 9);
 
   &:after {
-    @include a.slantedSectionAfter("", 100vw, 100vh, absolute, a.$red, -1, 0);
+    @include a.slantedSectionAfter(
+      "",
+      100vw,
+      100vh,
+      absolute,
+      a.$skills-blue,
+      -1,
+      0
+    );
     @include a.prefix(transform-origin, right bottom, ms moz webkit);
     @include a.prefix(transform, skewY(-3deg), ms moz webkit);
   }
@@ -75,3 +83,5 @@
   border-radius: 50%;
   height: auto;
 }
+
+// background-color: #6290C3

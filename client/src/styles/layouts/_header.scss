@@ -1,4 +1,4 @@
-@use '../abstracts' as a;
+@use "../abstracts" as a;
 
 // header section of portfolio page
 // ==============================================================
@@ -6,7 +6,7 @@
 .hdr {
   background-color: a.$st-patricks-blue;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   @include a.flexbox-config($justify-content: center, $align-items: center);
 
   z-index: 11;

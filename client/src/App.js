@@ -1,5 +1,5 @@
 import React from "react";
-
+// import { BrowserRouter as Routes, Route, Router } from "react-router-dom";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Projects from "./components/Projects";
@@ -35,7 +35,6 @@ function App() {
       <About />
 
       <Footer />
-
       {/* <div>
         <p>{!data ? "Loading..." : data}</p>
       </div> */}

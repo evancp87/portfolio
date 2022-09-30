@@ -11,10 +11,8 @@ const Header = () => {
         <h1 className="hdr__intro-heading">
           Hello, 👋🏽 I'm Evan Parker. Web Developer
         </h1>
-
         <Avatar />
         <ThoughtBubble />
-
         <NeonButton />
       </div>
     </header>

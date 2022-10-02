@@ -957,6 +957,11 @@ main {
   }
 }
 
+@media screen and (max-height: 768px) {
+  .thought-bubble .thought-bubble__point {
+    left: 0;
+  }
+}
 .socials {
   position: fixed;
   top: 50%;
@@ -1165,7 +1170,7 @@ main {
 .hdr {
   background-color: #2b2f77;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,4 +1,4 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 // NeonButton component styling
 .neon-btn-container {
@@ -92,5 +92,11 @@
   }
   100% {
     @include prefix(transform, rotate(90deg), ms moz webkit);
+  }
+}
+
+@media screen and (max-height: 768px) {
+  .neon-btn-container {
+    margin-bottom: 2em;
   }
 }

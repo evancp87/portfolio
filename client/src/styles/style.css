@@ -551,6 +551,11 @@ main {
     transform: rotate(90deg);
   }
 }
+@media screen and (max-height: 768px) {
+  .neon-btn-container {
+    margin-bottom: 2em;
+  }
+}
 .skills {
   width: 100vw;
   height: auto;

@@ -43,7 +43,7 @@
 }
 
 // to fix thought bubble point breaking on viewports with shorter height
-@media screen and (max-height: 768px) {
+@media screen and (max-height: 650px) {
   .thought-bubble .thought-bubble__point {
     left: 0;
   }

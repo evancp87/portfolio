@@ -84,4 +84,11 @@
   height: auto;
 }
 
+.skills__item:where(:nth-of-type(18), :nth-of-type(19))
+  > .skills__icon-container
+  .skills__icon {
+  background: a.$white;
+  border-radius: 50%;
+}
+
 // background-color: #6290C3

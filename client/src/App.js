@@ -7,6 +7,7 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import Socials from "./components/Socials";
 import Skills from "./components/Skills";
+import FreelanceProjects from "./components/FreelanceProjects";
 
 function App() {
   //   const [data, setData] = useState({});
@@ -30,6 +31,7 @@ function App() {
 
       <Projects />
 
+      <FreelanceProjects />
       <Skills />
 
       <About />

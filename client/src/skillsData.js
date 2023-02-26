@@ -13,6 +13,11 @@ const gitIcon = require("./assets/Images/git.png");
 const githubIcon = require("./assets/Images/github.png");
 const postgreIcon = require("./assets/Images/postgre.png");
 const tsIcon = require("./assets/Images/typescript.png");
+const slackIcon = require("./assets/Images/slack.png");
+const jiraIcon = require("./assets/Images/jira.png");
+const tailwindIcon = require("./assets/Images/tailwind.png");
+const jestIcon = require("./assets/Images/jest.png");
+const nextIcon = require("./assets/Images/next.png");
 
 export const SkillInfo = [
   {
@@ -85,9 +90,25 @@ export const SkillInfo = [
     title: "TypeScript",
     image: tsIcon,
   },
-  // {
-  //   title: "Jest",
-  // image: jestIcon,
-  // }
-  // {title: "NPM", image: npmIcon,}
+  {
+    title: "Slack",
+    image: slackIcon,
+  },
+  {
+    title: "Jira",
+    image: jiraIcon,
+  },
+  {
+    title: "Tailwind CSS",
+    image: tailwindIcon,
+  },
+
+  {
+    title: "Jest",
+    image: jestIcon,
+  },
+  {
+    title: "Next JS",
+    image: nextIcon,
+  },
 ];

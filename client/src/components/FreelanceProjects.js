@@ -7,7 +7,7 @@ function FreelanceProjects() {
     <section className="projects" id="projects">
       <div className="projects__header">
         <h2>Freelance Work</h2>
-        <p>A selection of freelance projects worked on for Oval Studio</p>
+        <p>Freelance projects worked on for Oval Studio</p>
       </div>
       <ul className="projects__list">
         {freelanceData.map((freelance, index) => (

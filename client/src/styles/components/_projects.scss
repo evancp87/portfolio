@@ -5,19 +5,24 @@
 .projects {
   @include a.slantedSection(100vw, auto, a.$white, relative, 10);
 
-  padding: {
-    top: #{a.$padding-sm-em * 7};
-    bottom: #{a.$padding-sm-em * 5};
-  }
-  @include a.extra-sm-phones-max {
-    padding-top: 0;
-  }
-
   &:after {
     @include a.slantedSectionAfter("", 100vw, 100vh, absolute, inherit, -1, 0);
 
     @include a.prefix(transform-origin, left bottom, ms moz webkit);
     @include a.prefix(transform, skewY(3deg), ms moz webkit);
+  }
+}
+
+// a change after freelance section added in- to remove slanted section for the first projects section only
+
+.projects:not(:has(.projects__header p)) {
+  padding-top: #{a.$padding-sm-em * 7};
+  &:after {
+    transform: skewY(0deg);
+    transform-origin: none;
+  }
+  @include a.extra-sm-phones-max {
+    padding-top: 0;
   }
 }
 

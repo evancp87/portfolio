@@ -664,13 +664,6 @@ main {
   background-color: #fff;
   position: relative;
   z-index: 10;
-  padding-top: 7em;
-  padding-bottom: 5em;
-}
-@media (max-width: 300px) {
-  .projects {
-    padding-top: 0;
-  }
 }
 .projects:after {
   content: "";
@@ -692,6 +685,19 @@ main {
   transform: skewY(3deg);
   -webkit-transform: skewY(3deg);
   transform: skewY(3deg);
+}
+
+.projects:not(:has(.projects__header p)) {
+  padding-top: 7em;
+}
+.projects:not(:has(.projects__header p)):after {
+  transform: skewY(0deg);
+  transform-origin: none;
+}
+@media (max-width: 300px) {
+  .projects:not(:has(.projects__header p)) {
+    padding-top: 0;
+  }
 }
 
 .projects__header {

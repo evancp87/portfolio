@@ -22,7 +22,7 @@ export const projects = [
     description:
       "Part of my Udacity Intermediate Javascript Nanodegree. A dashboard showing the information of 3 different Mars Rovers and an image of the day, consuming data from the Nasa Mars Rover api. Built with JS functional programming paradigm, Immutable JS library and Sass",
     image: mars,
-    link: "https://mars-rover-dashboard-app.herokuapp.com/",
+    link: "https://mars-rover-dashboard-7uwc.onrender.com/",
   },
   {
     title: "Frontend Mentor projects",

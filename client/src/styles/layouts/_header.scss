@@ -4,7 +4,7 @@
 // ==============================================================
 
 .hdr {
-  background-color: a.$st-patricks-blue;
+  background-color: a.$purple;
   width: 100vw;
   min-height: 100vh;
   @include a.flexbox-config($justify-content: center, $align-items: center);
@@ -30,5 +30,10 @@
       padding-top: a.$padding-lg-screen;
       color: a.$grey-text;
     }
+  }
+  .hdr__intro-tech {
+    margin-bottom: 2em;
+    color: a.$grey-text;
+    font-size: clamp(0.7rem, 1.5vw, 4rem);
   }
 }

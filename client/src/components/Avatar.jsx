@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-const classNames = require("classnames");
+import classNames from "classnames";
+import Front from "../assets/Images/avatar-one.png";
+import Back from "../assets/Images/evan-portrait.png";
 
 // avatar component
 const Avatar = () => {
@@ -19,14 +21,14 @@ const Avatar = () => {
       {/* front face of avatar */}
       <div className="avatar__card" title="Flip me">
         <img
-          src={require("../assets/Images/avatar.png")}
+          src={Front}
           alt="Evan Parker hdr avatar"
           className=" avatar__front"
         />
         {/* back face of avatar */}
 
         <img
-          src={require("../assets/Images/evan-portrait.png")}
+          src={Back}
           alt="Evan Parker back avatar"
           className=" avatar__back"
         />

@@ -22,6 +22,10 @@ const Project = (props) => {
 
         <p className="projects__proj-description">{props.description}</p>
       </div>
+      <div className="projects__source-code">
+        <p>Live Demo</p>
+        <p>Source</p>
+      </div>
     </li>
   );
 };

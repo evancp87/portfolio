@@ -1,5 +1,5 @@
 import React from "react";
-import { freelanceData } from "../freelanceData";
+import { freelanceData } from "../data/freelanceData";
 import Freelance from "./Freelance";
 
 function FreelanceProjects() {

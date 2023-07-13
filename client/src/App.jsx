@@ -6,7 +6,6 @@ import Projects from "./components/Projects";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Socials from "./components/Socials";
-import Skills from "./components/Skills";
 import FreelanceProjects from "./components/FreelanceProjects";
 
 function App() {
@@ -29,17 +28,12 @@ function App() {
 
       <Socials />
 
+      <About />
       <Projects />
 
       <FreelanceProjects />
-      <Skills />
-
-      <About />
 
       <Footer />
-      {/* <div>
-        <p>{!data ? "Loading..." : data}</p>
-      </div> */}
     </main>
   );
 }

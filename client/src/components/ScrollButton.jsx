@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
 const ScrollButton = () => {
   const [visible, setVisible] = useState(false);

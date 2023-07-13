@@ -5,12 +5,12 @@ import { MdArrowRightAlt } from "react-icons/md";
 const NeonButton = () => {
   return (
     <button className="neon-btn-container">
-      <a href="#projects" className="neon-btn">
+      <a href="#about" className="neon-btn">
         <span className="snake"></span>
         <span className="snake"></span>
         <span className="snake"></span>
         <span className="snake"></span>
-        See my work
+        Discover More
         <MdArrowRightAlt className="neon-btn__arrow" />
       </a>
     </button>

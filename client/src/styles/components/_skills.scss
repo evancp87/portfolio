@@ -28,29 +28,33 @@
 .skills__list {
   display: grid;
   padding-top: 3em;
-  grid-template-columns: repeat(1, 250px);
+  grid-template-columns: repeat(5, 100px);
   justify-content: center;
-  grid-row-gap: 3em;
+  grid-row-gap: 1em;
   padding-bottom: 3em;
 
   @include a.lg-tablets {
-    grid-template-columns: repeat(2, 300px);
+    grid-template-columns: repeat(6, 150px);
   }
   @include a.xl-tablets {
     display: grid;
 
-    grid-template-columns: repeat(3, 300px);
+    grid-template-columns: repeat(7, 150px);
   }
 
   .skills__item {
+    transition: scale 0.5s ease-in-out;
+    position: relative;
     @include a.flexbox-config($flex-direction: column, $align-items: center);
-
+    &:hover {
+      scale: 1.2;
+    }
     .skills__icon-container {
       @include a.flexbox-config($justify-content: center);
       margin-bottom: a.$margin-em-spacing-sm;
     }
     .skills__icon {
-      max-width: 100px;
+      max-width: 75px;
       display: block;
       height: auto;
     }
@@ -59,6 +63,10 @@
 
 .skills__details {
   display: contents;
+  // display: none;
+  border: none;
+  background-color: purple;
+  position: absolute;
 
   .skills__title {
     background: a.$gradient-header;
@@ -74,6 +82,12 @@
       margin: a.$margin-em-spacing-sm;
     }
   }
+}
+
+.skills__detail.active {
+  display: block;
+  animation: tooltip 0.6s ease-in-out;
+  opacity: 0;
 }
 
 // to add backgrounds for MongoDB and figma icon, to make it the same style as the others
@@ -92,3 +106,12 @@
 }
 
 // background-color: #6290C3
+
+@keyframes tooltip {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

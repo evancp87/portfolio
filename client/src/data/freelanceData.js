@@ -1,6 +1,6 @@
-const glimpses = require("./assets/Images/glimpses.png");
-const iHeartFilm = require("./assets/Images/iheartfilm.png");
-const blackBoxes = require("./assets/Images/blackboxes.png");
+import glimpses from "../assets/Images/glimpses.png";
+import iHeartFilm from "../assets/Images/iheartfilm.png";
+import blackBoxes from "../assets/Images/blackboxes.png";
 export const freelanceData = [
   {
     title: "Glimpses",
@@ -19,6 +19,6 @@ export const freelanceData = [
     title: "Black Boxes",
     description: "Website for a digital art project called Black Boxes",
     image: blackBoxes,
-    link: "https://blackboxesdev.wpengine.com/",
+    link: "https://opentheblackboxes.org/",
   },
 ];

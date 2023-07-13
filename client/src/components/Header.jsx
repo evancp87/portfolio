@@ -9,8 +9,12 @@ const Header = () => {
     <header className="hdr" id="header">
       <div className="hdr__intro ">
         <h1 className="hdr__intro-heading">
-          Hello, 👋🏽 I'm Evan Parker. Web Developer
+          Hello, 👋🏽 I'm Evan Parker. Software Engineer
         </h1>
+        <p className="hdr__intro-tech">
+          Coding websites with React - Next JS - Sass - Tailwind - Express -
+          PostGreSQL - MongoDB
+        </p>
         <Avatar />
         <ThoughtBubble />
         <NeonButton />

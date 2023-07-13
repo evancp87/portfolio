@@ -3,7 +3,7 @@
 // project section- slanted top and bottom with before and after
 
 .projects {
-  @include a.slantedSection(100vw, auto, a.$white, relative, 10);
+  @include a.slantedSection(100vw, auto, a.$light-blue, relative, 10);
 
   &:after {
     @include a.slantedSectionAfter("", 100vw, 100vh, absolute, inherit, -1, 0);
@@ -48,10 +48,13 @@
   }
 
   @include a.lg-tablets {
-    grid-template-columns: repeat(2, 400px);
+    grid-template-columns: repeat(3, 400px);
   }
 
   .projects__project {
+    background-color: a.$white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
     @include a.flexbox-config($flex-direction: column);
     @include a.extra-sm-phones-max {
       margin: 0 a.$margin-em-spacing-md;
@@ -62,25 +65,30 @@
     }
 
     .projects__proj-img-container {
+      margin-top: -80px;
       @include a.flexbox-config($justify-content: center);
 
       .projects__proj-img {
         border-radius: 50%;
-        border: 5px solid black;
+        border: 5px solid #50a747;
         box-shadow: 0px 1px 20px 5px #808080;
         max-width: 300px;
         width: 200px;
         aspect-ratio: 2/1;
         height: 200px;
         transition: all 0.5s ease-in-out;
+        padding: 0.3em;
+        background-color: white;
 
         @include a.xl-tablets {
-          height: 300px;
-          width: 300px;
+          // height: 300px;
+          // width: 300px;
+          height: 250px;
+          width: 250px;
 
-          &:hover {
-            @include a.prefix(transform, translateY(-1em), ms moz webkit);
-          }
+          // &:hover {
+          //   @include a.prefix(transform, translateY(-1em), ms moz webkit);
+          // }
         }
       }
     }
@@ -109,4 +117,16 @@
     font-weight: 400;
     white-space: nowrap;
   }
+}
+
+.projects__source-code {
+  @include a.flexbox-config(
+    $flex-direction: row,
+    $justify-content: space-around,
+    $align-items: center
+  );
+
+  background: #ff3e3e;
+  height: 50px;
+  border-radius: 0 0 10px 10px;
 }

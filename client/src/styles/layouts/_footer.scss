@@ -1,4 +1,4 @@
-@use '../abstracts' as a;
+@use "../abstracts" as a;
 
 // Footer styles
 .ftr {
@@ -34,6 +34,22 @@
     width: 400px;
     display: block;
     height: 400px;
+  }
+}
+
+// form fields
+
+.ftr__form {
+  @include a.flexbox-config($flex-direction: column, $align-items: center);
+  width: 50vw;
+  gap: 1em;
+  margin-top: 2em;
+  .ftr__field {
+    max-width: 100%;
+    width: 100%;
+    background-color: #cfd7de;
+    border: none;
+    border-radius: 5px;
   }
 }
 

@@ -1,0 +1,56 @@
+ [
+  {
+    "title": "Glimpses",
+    "description": "A freelance project done for an arts website ",
+    "image": "../assets/Images/glimpses.png",
+    "link": "https://glimpsesof.art/",
+    "type": "Freelance"
+  },
+  {
+    "title": "I heart Film",
+    "description":
+      "A website for an organisation of film producers based in Bahrain",
+    "image": "../assets/Images/iheartfilm.png",
+    "link": "https://iheartfilm.net/",
+    "type": "Freelance"
+  },
+  {
+    "title": "Black Boxes",
+    "description": "Website for a digital art project called Black Boxes",
+    "image": "../assets/Images/blackboxes.png",
+    "link": "https://opentheblackboxes.org/",
+    "type": "Freelance"
+  },
+  {
+    "title": "HomeBrew",
+    "description":
+      "A fictional home brewing subscription website. This was my final project as part of my General Assembly Front End Web Development course. It is a static website built with Sass, html and vanilla Javascript ",
+    "image": "../assets/Images/homebrew.png",
+    "link": "https://homebrew-beer-ldn.netlify.app/",
+    "type": "Other"
+  },
+  {
+    "title": "Would You Rather",
+    "description":
+      "Part of my Udacity React Nanodegree, a game of Would You Rather, that allows a user to log in from a pre set list of users, create questions, vote on other questions, and see a leaderboard. Built with React, Redux, Context Api and Sass. ",
+    "image": "../assets/Images/would-you-rather.png",
+    "link": "https://wyrcats.netlify.app/",
+    "type": "Other"
+  },
+  {
+    "title": "Mars Rover Dashboard",
+    "description":
+      "Part of my Udacity Intermediate Javascript Nanodegree. A dashboard showing the information of 3 different Mars Rovers and an image of the day, consuming data from the Nasa Mars Rover api. Built with JS functional programming paradigm, Immutable JS library and Sass",
+    "image": "../assets/Images/mars-dashboard.png",
+    "link": "https://mars-rover-dashboard-7uwc.onrender.com/",
+    "type": "Other"
+  },
+  {
+    "title": "Frontend Mentor projects",
+    "description":
+      "A link to my Front End Mentor profile page, showing a list of completed challenges",
+    "image": "../assets/Images/frontendmentor.png",
+    "link": "https://www.frontendmentor.io/profile/evancp87",
+    "type": "Other"
+  }
+]

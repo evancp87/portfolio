@@ -1,18 +1,15 @@
 import React from "react";
-import LazyLoad from "react-lazyload";
 
 function Freelance(props) {
   return (
     <li key={props.index} className="projects__project">
       <div className="projects__proj-img-container">
         <a href={props.link}>
-          <LazyLoad offset={100}>
-            <img
-              src={props.image}
-              alt={props.title}
-              className="projects__proj-img"
-            />
-          </LazyLoad>
+          <img
+            src={props.image}
+            alt={props.title}
+            className="projects__proj-img"
+          />
         </a>
       </div>
       <div className="projects__project-details">

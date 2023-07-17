@@ -1,10 +1,15 @@
 import React from "react";
-const Controls = () => {
+
+const Controls = ({ handleSortValue, sortValue }) => {
   return (
     <div className="">
-      <button>Bootcamp projects</button>
-      <button>Freelance projects</button>
-      <button>Other Projects</button>
+      <button onClick={() => handleSortValue("Bootcamp")}>
+        Bootcamp projects
+      </button>
+      <button onClick={() => handleSortValue("Freelance")}>
+        Freelance projects
+      </button>
+      <button onClick={() => handleSortValue("Other")}>Other Projects</button>
     </div>
   );
 };

@@ -3,7 +3,7 @@
 // Footer styles
 .ftr {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   background-color: a.$white;
   @include a.flexbox-config(
     $flex-direction: column,
@@ -50,6 +50,9 @@
     background-color: #cfd7de;
     border: none;
     border-radius: 5px;
+  }
+  .ftr__field--input {
+    height: 30px;
   }
 }
 

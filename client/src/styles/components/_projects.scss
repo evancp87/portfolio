@@ -5,12 +5,12 @@
 .projects {
   @include a.slantedSection(100vw, auto, a.$light-blue, relative, 10);
 
-  &:after {
-    @include a.slantedSectionAfter("", 100vw, 100vh, absolute, inherit, -1, 0);
+  // &:after {
+  //   @include a.slantedSectionAfter("", 100vw, 100vh, absolute, inherit, -1, 0);
 
-    @include a.prefix(transform-origin, left bottom, ms moz webkit);
-    @include a.prefix(transform, skewY(3deg), ms moz webkit);
-  }
+  //   @include a.prefix(transform-origin, left bottom, ms moz webkit);
+  //   @include a.prefix(transform, skewY(3deg), ms moz webkit);
+  // }
 }
 
 // a change after freelance section added in- to remove slanted section for the first projects section only
@@ -41,8 +41,12 @@
 .projects__list {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(1, 300px);
-  grid-auto-rows: auto;
+  grid: {
+    template-columns: repeat(1, 300px);
+    auto-rows: auto;
+    row-gap: 7em;
+  }
+  margin-top: 5em;
   @include a.sm-tablets {
     grid-template-columns: repeat(2, 300px);
   }
@@ -55,7 +59,11 @@
     background-color: a.$white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-    @include a.flexbox-config($flex-direction: column);
+    @include a.flexbox-config(
+      $flex-direction: column,
+      // $justify-content: flex-end
+    );
+    position: relative;
     @include a.extra-sm-phones-max {
       margin: 0 a.$margin-em-spacing-md;
     }
@@ -125,8 +133,20 @@
     $justify-content: space-around,
     $align-items: center
   );
-
+  position: absolute;
+  bottom: 0;
   background: #ff3e3e;
   height: 50px;
+  width: 100%;
   border-radius: 0 0 10px 10px;
+
+  .projects__source-code-container {
+    gap: 1em;
+    @include a.flexbox-config($flex-direction: row, $align-items: center);
+    .projects__source-logo {
+      max-width: 30px;
+      display: block;
+      height: 30px;
+    }
+  }
 }

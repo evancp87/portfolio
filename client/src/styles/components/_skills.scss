@@ -30,7 +30,7 @@
   padding-top: 3em;
   grid-template-columns: repeat(5, 100px);
   justify-content: center;
-  grid-row-gap: 1em;
+  grid-row-gap: 3em;
   padding-bottom: 3em;
 
   @include a.lg-tablets {
@@ -43,15 +43,18 @@
   }
 
   .skills__item {
-    transition: scale 0.5s ease-in-out;
+    transition: scale 0.3s ease-in-out;
     position: relative;
+    z-index: 200;
     @include a.flexbox-config($flex-direction: column, $align-items: center);
     &:hover {
-      scale: 1.2;
+      scale: 1.1;
     }
     .skills__icon-container {
       @include a.flexbox-config($justify-content: center);
       margin-bottom: a.$margin-em-spacing-sm;
+      position: relative;
+      z-index: 200;
     }
     .skills__icon {
       max-width: 75px;
@@ -61,17 +64,33 @@
   }
 }
 
-.skills__details {
-  display: contents;
-  // display: none;
-  border: none;
-  background-color: purple;
+.skills__detail {
+  // display: contents;
+  display: inline-block;
+  // border: none;
+  border-radius: 10px;
+  background-color: #3e3eff;
   position: absolute;
+  bottom: -25%;
+  z-index: 500;
+
+  // tooltip pointer
+  &:before {
+    content: "";
+    position: absolute;
+    top: -45%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #3e3eff transparent;
+  }
 
   .skills__title {
-    background: a.$gradient-header;
     padding: 0.5em;
     font-weight: 400;
+    font-size: 12px;
+    color: #eae7e7;
   }
   .skills__description {
     max-width: 250px;
@@ -87,7 +106,7 @@
 .skills__detail.active {
   display: block;
   animation: tooltip 0.6s ease-in-out;
-  opacity: 0;
+  // opacity: 0;
 }
 
 // to add backgrounds for MongoDB and figma icon, to make it the same style as the others

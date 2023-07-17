@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import LazyLoad from "react-lazyload";
 // Singular Project component that takes props from Projects file and project data
 const Skill = (props) => {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -12,12 +11,13 @@ const Skill = (props) => {
       onMouseLeave={() => setShowTooltip(false)}
     >
       <div className="skills__icon-container">
-        <LazyLoad offset={100}>
-          <img src={props.image} alt={props.title} className="skills__icon" />
-        </LazyLoad>
+        <img src={props.image} alt={props.title} className="skills__icon" />
       </div>
       {showTooltip && (
-        <div className="skills__detail active">
+        <div
+          // className={showTooltip ? "skills__detail active" : "skills__detail "}
+          className="skills__detail "
+        >
           <h2 className="skills__title"> {props.title}</h2>
         </div>
       )}

@@ -3,32 +3,30 @@
 // project section- slanted top and bottom with before and after
 
 .projects {
-  @include a.slantedSection(100vw, auto, a.$light-blue, relative, 10);
-
-  // &:after {
-  //   @include a.slantedSectionAfter("", 100vw, 100vh, absolute, inherit, -1, 0);
-
-  //   @include a.prefix(transform-origin, left bottom, ms moz webkit);
-  //   @include a.prefix(transform, skewY(3deg), ms moz webkit);
-  // }
+  @include a.slantedSection(100vw, auto, #3e8dff, relative, 10);
+  min-height: 100vh;
 }
 
 // a change after freelance section added in- to remove slanted section for the first projects section only
 
 .projects:not(:has(.projects__header p)) {
   padding-top: #{a.$padding-sm-em * 7};
-  &:after {
-    transform: skewY(0deg);
-    transform-origin: none;
-  }
+
   @include a.extra-sm-phones-max {
     padding-top: 0;
   }
 }
 
 .projects__header {
-  @include a.flexbox-config($justify-content: center);
+  @include a.flexbox-config(
+    $justify-content: center,
+    $flex-direction: column,
+    $align-items: center
+  );
   margin-bottom: #{a.$margin-em-spacing-sm * 5};
+  > h2 {
+    margin-bottom: 2em;
+  }
 }
 
 // for freelance projects section with description
@@ -42,38 +40,46 @@
   display: grid;
   justify-content: center;
   grid: {
-    template-columns: repeat(1, 300px);
+    template-columns: repeat(auto-fill, 225px);
     auto-rows: auto;
     row-gap: 7em;
   }
+  padding-inline: 5em;
   margin-top: 5em;
+  padding-bottom: 5em;
   @include a.sm-tablets {
-    grid-template-columns: repeat(2, 300px);
+    grid-template-columns: repeat(auto-fill, 350px);
   }
 
   @include a.lg-tablets {
-    grid-template-columns: repeat(3, 400px);
+    grid-column-gap: 2em;
   }
 
   .projects__project {
     background-color: a.$white;
+    transition: box-shadow 0.5s ease-in-out;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-    @include a.flexbox-config(
-      $flex-direction: column,
-      // $justify-content: flex-end
-    );
+    min-height: 500px;
+    box-shadow: -19px 22px 30px 8px rgba(64, 57, 64, 1);
+    @include a.flexbox-config($flex-direction: column);
     position: relative;
     @include a.extra-sm-phones-max {
       margin: 0 a.$margin-em-spacing-md;
     }
-
+    @include a.xs-tablets-max-width {
+      padding-bottom: 5em;
+    }
     @include a.sm-tablets {
       margin-right: a.$margin-em-spacing-sm;
+      margin-bottom: 3em;
     }
-
+    &:hover {
+      box-shadow: -19px 22px 30px 22px rgba(64, 57, 64, 1);
+    }
     .projects__proj-img-container {
       margin-top: -80px;
+      position: relative;
+
       @include a.flexbox-config($justify-content: center);
 
       .projects__proj-img {
@@ -89,14 +95,8 @@
         background-color: white;
 
         @include a.xl-tablets {
-          // height: 300px;
-          // width: 300px;
           height: 250px;
           width: 250px;
-
-          // &:hover {
-          //   @include a.prefix(transform, translateY(-1em), ms moz webkit);
-          // }
         }
       }
     }
@@ -106,9 +106,10 @@
 // project details and description
 .projects__project-details {
   @include a.flexbox-config($flex-direction: column, $align-items: center);
+
   .projects__proj-description {
     margin: {
-      bottom: #{a.$margin-em-spacing-sm * 5};
+      bottom: #{a.$margin-em-spacing-sm * 1};
       top: a.$margin-em-spacing-sm;
     }
     line-height: 1.5em;
@@ -116,7 +117,6 @@
     font-weight: 400;
   }
 }
-
 .projects__project-header {
   margin-top: a.$margin-em-spacing-sm;
   background: a.$gradient-header;
@@ -140,6 +140,9 @@
   width: 100%;
   border-radius: 0 0 10px 10px;
 
+  .projects__source-code-live {
+    cursor: pointer;
+  }
   .projects__source-code-container {
     gap: 1em;
     @include a.flexbox-config($flex-direction: row, $align-items: center);
@@ -149,4 +152,26 @@
       height: 30px;
     }
   }
+}
+
+.projects__tech-stack {
+  @include a.flexbox-config($flex-direction: row, $justify-content: flex-start);
+  gap: 0.5em;
+  max-width: 80%;
+  width: 80%;
+  flex-wrap: wrap;
+
+  .projects__tech-stack-item {
+    border: none;
+    padding: 0.4em;
+    border-radius: 10px;
+    color: white;
+    background-color: #69cf95;
+    font-size: 12px;
+    @include a.flexbox-config($align-items: center);
+  }
+}
+
+.projects__project-header-title {
+  font-size: clamp(1rem, 0.786rem + 1.143vw, 1.5rem);
 }

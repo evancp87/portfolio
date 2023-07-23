@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 // navbar for homepage
 const Nav = () => {
   return (
@@ -9,17 +9,18 @@ const Nav = () => {
       </ul>
       <ul className="navigation__nav-items">
         <li className="navigation__nav-item">
-          <a href="#header">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li className="navigation__nav-item">
-          <a href="#projects">Projects</a>
+          <Link to="about">About</Link>
         </li>
         <li className="navigation__nav-item">
-          <a href="#skills">Skills</a>
+          <Link to="projects">Projects</Link>
         </li>
         <li className="navigation__nav-item">
-          <a href="#about">About</a>
+          <Link to="contact">Contact</Link>
         </li>
+
         <li className="navigation__nav-item">
           <a href="pdfs/cv.pdf" target="_blank">
             CV

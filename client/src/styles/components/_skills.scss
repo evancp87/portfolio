@@ -1,23 +1,6 @@
 @use "../abstracts" as a;
 
 // skills section- slanted top and bottom with before and after
-.skills {
-  @include a.slantedSection(100vw, auto, a.$skills-blue, relative, 9);
-
-  &:after {
-    @include a.slantedSectionAfter(
-      "",
-      100vw,
-      100vh,
-      absolute,
-      a.$skills-blue,
-      -1,
-      0
-    );
-    @include a.prefix(transform-origin, right bottom, ms moz webkit);
-    @include a.prefix(transform, skewY(-3deg), ms moz webkit);
-  }
-}
 
 .skills__header {
   padding-top: 7em;
@@ -28,18 +11,16 @@
 .skills__list {
   display: grid;
   padding-top: 3em;
-  grid-template-columns: repeat(5, 100px);
+
+  grid-template-columns: repeat(4, minmax(50px, 70px));
   justify-content: center;
-  grid-row-gap: 3em;
+  grid-row-gap: 2em;
   padding-bottom: 3em;
 
-  @include a.lg-tablets {
-    grid-template-columns: repeat(6, 150px);
-  }
-  @include a.xl-tablets {
-    display: grid;
+  @include a.sm-tablets {
+    grid-row-gap: 3em;
 
-    grid-template-columns: repeat(7, 150px);
+    grid-template-columns: repeat(auto-fill, 200px);
   }
 
   .skills__item {
@@ -57,7 +38,8 @@
       z-index: 200;
     }
     .skills__icon {
-      max-width: 75px;
+      // max-width: 75px;
+      max-width: clamp(1.875rem, 0.67rem + 6.429vw, 4.688rem);
       display: block;
       height: auto;
     }
@@ -112,7 +94,6 @@
 // to add backgrounds for MongoDB and figma icon, to make it the same style as the others
 .skills__item:nth-of-type(8) > .skills__icon-container {
   background: a.$white;
-  width: 100px;
   border-radius: 50%;
   height: auto;
 }

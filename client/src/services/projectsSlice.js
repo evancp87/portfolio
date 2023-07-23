@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-
+import { getProjects } from "../utils/helpers";
 const initialState = {
   projects: [],
   sortInput: {},
@@ -9,6 +9,7 @@ export const setProjects = createAsyncThunk(
   async () => {
     try {
       const response = await getProjects();
+      console.log("checking the response", response);
       return response;
     } catch (error) {
       console.log("error:", error);

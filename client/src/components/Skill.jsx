@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // Singular Project component that takes props from Projects file and project data
-const Skill = (props) => {
+const Skill = ({ image, title }) => {
   const [showTooltip, setShowTooltip] = useState(false);
   console.log(showTooltip);
 
@@ -11,14 +11,11 @@ const Skill = (props) => {
       onMouseLeave={() => setShowTooltip(false)}
     >
       <div className="skills__icon-container">
-        <img src={props.image} alt={props.title} className="skills__icon" />
+        <img src={image} alt={title} className="skills__icon" />
       </div>
       {showTooltip && (
-        <div
-          // className={showTooltip ? "skills__detail active" : "skills__detail "}
-          className="skills__detail "
-        >
-          <h2 className="skills__title"> {props.title}</h2>
+        <div className="skills__detail ">
+          <h2 className="skills__title"> {title}</h2>
         </div>
       )}
     </li>

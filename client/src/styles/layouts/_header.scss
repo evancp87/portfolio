@@ -4,13 +4,16 @@
 // ==============================================================
 
 .hdr {
-  background-color: a.$st-patricks-blue;
+  background-color: a.$purple;
   width: 100vw;
   min-height: 100vh;
   @include a.flexbox-config($justify-content: center, $align-items: center);
 
   z-index: 11;
   position: relative;
+  @include a.extra-sm-phones-max {
+    margin-top: -30px;
+  }
 }
 
 // header intro text- responsive with clamp()
@@ -30,5 +33,12 @@
       padding-top: a.$padding-lg-screen;
       color: a.$grey-text;
     }
+  }
+  .hdr__intro-tech {
+    margin-bottom: 2em;
+    max-width: 80vw;
+    text-align: center;
+    color: a.$grey-text;
+    font-size: clamp(0.7rem, 1.5vw, 4rem);
   }
 }

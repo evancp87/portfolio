@@ -100,6 +100,12 @@
     @content;
   }
 }
+
+@mixin xs-tablets-max-width {
+  @media (max-width: 450px) {
+    @content;
+  }
+}
 @mixin main-phone-breakpoint {
   @media (min-width: 400) {
     @content;

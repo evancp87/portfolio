@@ -1,0 +1,33 @@
+@use "../abstracts/" as *;
+
+.controls {
+  --btn-color: #69cf95;
+  @include flexbox-config($justify-content: center);
+  margin-bottom: 2em;
+  gap: 1em;
+
+  .controls__btn {
+    transition: box-shadow 0.4s ease-in-out;
+    max-width: 150px;
+    width: clamp(4rem, 2.679rem + 10.714vw, 9.375rem);
+    height: auto;
+    color: #ffffff;
+    padding: 0.5em;
+    border-radius: 10px;
+    font-size: clamp(0.75rem, 0.643rem + 0.571vw, 1rem);
+    border: none;
+    cursor: pointer;
+    background-color: var(--btn-color);
+    offset: 1em;
+    &:active {
+      outline: 1px dashed #ffffff;
+      outline-offset: 0.5em;
+    }
+    box-shadow: -7px 1px 30px -3px rgba(64, 57, 64, 1);
+
+    &:hover {
+      box-shadow: -7px 1px 30px 2px rgba(64, 57, 64, 1);
+      background-color: scale-color($color: #69cf95, $lightness: -30%);
+    }
+  }
+}

@@ -1,0 +1,113 @@
+ [
+  {
+    "title": "Portfolio",
+    "description": "You're on this right now! Built in 2022 and overhauled as part of my bootcamp at The Jump Digital School.   ",
+    "image": "src/assets/Images/portfolio.png",
+    "link": "#",
+    "github": "https://github.com/evancp87/portfolio",
+    "type": "Bootcamp",
+    "stack": ["Redux", "React"]
+  },
+
+  {
+    "title": "First Level",
+    "description": "The Frontend for my React project. A dynamic and eye catching video games ecommerce site using the RAWG api, the largest video games database in the world",
+    "image": "src/assets/Images/first-level.png",
+    "github": "https://github.com/evancp87/first-level",
+
+    "link": "https://first-level.netlify.app",
+    "type": "Bootcamp",
+    "stack": ["Redux Toolkit", "React","GSAP", "Tailwind Css", "DayJS" ]
+   
+  },
+  
+  {
+    "title": "World Wide Weather",
+    "description": "A vanilla JavaScript project using the Openweather api to display weather for cities around the world and geolocation for local weather",
+    "image": "src/assets/Images/weather.png",
+    "github": "https://github.com/evancp87/ch14-weather-app",
+
+    "link": "https://worldwideweatherr.netlify.app",
+    "type": "Bootcamp",
+    "stack": ["JavaScript", "React", "Sass"]
+
+
+  },
+  {
+    "title": "Glimpses",
+    "description": "A freelance project for an arts website for an organisation of art curators in Europe ",
+    "image": "src/assets/Images/glimpses.png",
+    "github": "#",
+
+    "link": "https://glimpsesof.art/",
+    "type": "Freelance",
+    "stack": ["JavaScript", "CSS"]
+
+
+  },
+  {
+    "title": "I heart Film",
+    "description":
+      "A website for an organisation of film producers based in Bahrain. An eye catching grid of videos and use of the vimeo api were fun to build on this project",
+    "image": "src/assets/Images/iheartfilm.png",
+    "github": "#",
+
+    "link": "https://iheartfilm.net/",
+    "type": "Freelance",
+    "stack": ["JavaScript", "CSS"]
+
+
+  },
+  {
+    "title": "Black Boxes",
+    "description": "Website for a digital art project called Black Boxes, which I built out the homepage and grid layouts for, including a scrolling ticker tape style line of words",
+    "image": "src/assets/Images/blackboxes.png",
+    "github": "#",
+
+    "link": "https://opentheblackboxes.org/",
+    "type": "Freelance",
+    "stack": ["JavaScript", "CSS"]
+
+
+  },
+ 
+  {
+    "title": "Would You Rather",
+    "description":
+      "Part of my Udacity React Nanodegree, a game of Would You Rather, that allows a user to log in from a pre set list of users, create questions, vote on other questions, and see a leaderboard. ",
+    "image": "src/assets/Images/would-you-rather.png",
+    "github": "https://github.com/evancp87/would-you-rather",
+
+    "link": "https://wyrcats.netlify.app/",
+    "type": "Other",
+    "stack": ["Redux", "React",  "Sass", "React Bootstrap"]
+
+
+  },
+  {
+    "title": "Mars Rover Dashboard",
+    "description":
+      "Part of my Udacity Intermediate Javascript Nanodegree. A dashboard showing the information of 3 different Mars Rovers and an image of the day, consuming data from the Nasa Mars Rover api.",
+    "image": "src/assets/Images/mars-dashboard.png",
+    "github": "https://github.com/evancp87/mars-dashboard",
+
+    "link": "https://mars-rover-dashboard-7uwc.onrender.com/",
+    "type": "Other",
+    "stack": ["Redux", "React", "Immutable JS", "Sass"]
+
+
+  },
+  {
+    "title": "Frontend Mentor projects",
+    "description":
+      "A link to my Front End Mentor profile page, showing a list of completed challenges",
+    "image": "src/assets/Images/frontendmentor.png",
+    "github": "#",
+
+    "link": "https://www.frontendmentor.io/profile/evancp87",
+    "type": "Other",
+    "stack": ["Redux", "React"]
+
+
+  }
+]

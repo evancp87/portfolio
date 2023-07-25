@@ -1,23 +1,6 @@
 @use "../abstracts" as a;
 
 // skills section- slanted top and bottom with before and after
-.skills {
-  @include a.slantedSection(100vw, auto, a.$skills-blue, relative, 9);
-
-  &:after {
-    @include a.slantedSectionAfter(
-      "",
-      100vw,
-      100vh,
-      absolute,
-      a.$skills-blue,
-      -1,
-      0
-    );
-    @include a.prefix(transform-origin, right bottom, ms moz webkit);
-    @include a.prefix(transform, skewY(-3deg), ms moz webkit);
-  }
-}
 
 .skills__header {
   padding-top: 7em;
@@ -28,42 +11,68 @@
 .skills__list {
   display: grid;
   padding-top: 3em;
-  grid-template-columns: repeat(1, 250px);
+
+  grid-template-columns: repeat(4, minmax(50px, 70px));
   justify-content: center;
-  grid-row-gap: 3em;
+  grid-row-gap: 2em;
   padding-bottom: 3em;
 
-  @include a.lg-tablets {
-    grid-template-columns: repeat(2, 300px);
-  }
-  @include a.xl-tablets {
-    display: grid;
+  @include a.sm-tablets {
+    grid-row-gap: 3em;
 
-    grid-template-columns: repeat(3, 300px);
+    grid-template-columns: repeat(auto-fill, 200px);
   }
 
   .skills__item {
+    transition: scale 0.3s ease-in-out;
+    position: relative;
+    z-index: 200;
     @include a.flexbox-config($flex-direction: column, $align-items: center);
-
+    &:hover {
+      scale: 1.1;
+    }
     .skills__icon-container {
       @include a.flexbox-config($justify-content: center);
       margin-bottom: a.$margin-em-spacing-sm;
+      position: relative;
+      z-index: 200;
     }
     .skills__icon {
-      max-width: 100px;
+      // max-width: 75px;
+      max-width: clamp(1.875rem, 0.67rem + 6.429vw, 4.688rem);
       display: block;
       height: auto;
     }
   }
 }
 
-.skills__details {
-  display: contents;
+.skills__detail {
+  // display: contents;
+  display: inline-block;
+  // border: none;
+  border-radius: 10px;
+  background-color: #3e3eff;
+  position: absolute;
+  bottom: -25%;
+  z-index: 500;
+
+  // tooltip pointer
+  &:before {
+    content: "";
+    position: absolute;
+    top: -45%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #3e3eff transparent;
+  }
 
   .skills__title {
-    background: a.$gradient-header;
     padding: 0.5em;
     font-weight: 400;
+    font-size: 12px;
+    color: #eae7e7;
   }
   .skills__description {
     max-width: 250px;
@@ -76,10 +85,15 @@
   }
 }
 
+.skills__detail.active {
+  display: block;
+  animation: tooltip 0.6s ease-in-out;
+  // opacity: 0;
+}
+
 // to add backgrounds for MongoDB and figma icon, to make it the same style as the others
 .skills__item:nth-of-type(8) > .skills__icon-container {
   background: a.$white;
-  width: 100px;
   border-radius: 50%;
   height: auto;
 }
@@ -92,3 +106,12 @@
 }
 
 // background-color: #6290C3
+
+@keyframes tooltip {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

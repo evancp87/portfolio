@@ -1,4 +1,4 @@
-@use '../abstracts' as a;
+@use "../abstracts" as a;
 
 // navigation bar styles
 // ==============================================================
@@ -8,13 +8,13 @@
     $align-items: center
   );
 
-  background-color: a.$st-patricks-blue;
+  background-color: a.$purple;
   position: fixed;
   width: 100vw;
   top: 0;
   left: 0;
-  border-bottom: 1px solid a.$black;
-  height: 100px;
+  border-bottom: none;
+  height: 70px;
 
   z-index: 12;
   color: a.$grey;

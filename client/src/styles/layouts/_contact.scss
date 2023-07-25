@@ -1,10 +1,11 @@
-@use '../abstracts' as a;
+@use "../abstracts" as a;
 
 // Footer styles
-.ftr {
+.contact {
   width: 100vw;
-  height: 100vh;
-  background-color: a.$white;
+  min-height: 100vh;
+  padding-top: 8em;
+  background-color: #3e8dff;
   @include a.flexbox-config(
     $flex-direction: column,
     $justify-content: center,
@@ -12,10 +13,10 @@
   );
 
   // inherits flexbox properties from parent
-  .ftr__intro {
+  .contact__intro {
     display: contents;
   }
-  .ftr__accreditation {
+  .contact__accreditation {
     margin-top: 5em;
     font-size: 0.7em;
     color: a.$black;
@@ -23,7 +24,7 @@
 }
 
 // footer avatar image
-.ftr__avatar {
+.contact__avatar {
   width: 200px;
   max-width: 400px;
   height: auto;
@@ -37,12 +38,40 @@
   }
 }
 
-// ftr copyright
-.ftr__copyright {
+// form fields
+
+.contact__form {
+  @include a.flexbox-config($flex-direction: column, $align-items: center);
+  width: 50vw;
+  gap: 1em;
+  margin-top: 2em;
+  .contact__field {
+    padding-inline-start: 1em;
+    max-width: 100%;
+    width: 100%;
+    background-color: #cfd7de;
+    border: none;
+    border-radius: 5px;
+    &:focus {
+      outline: 1px dashed #ffffff;
+      outline-offset: 0.5em;
+    }
+  }
+  .contact__field--input {
+    height: 30px;
+    &:focus {
+      outline: 1px dashed #ffffff;
+      outline-offset: 0.5em;
+    }
+  }
+}
+
+// contact copyright
+.contact__copyright {
   display: flex;
   @include a.flexbox-config($flex-direction: column, $align-items: center);
   margin-top: a.$margin-em-spacing-md;
-  .ftr__scroll-button {
+  .contact__scroll-button {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -51,9 +80,9 @@
 }
 
 // contact btn- with nested button/text on hover
-.ftr__contact-btn {
+.contact__contact-btn {
   display: inline-block;
-  width: 200px;
+  width: 100%;
   height: 50px;
   margin: a.$margin-em-spacing-sm 0;
   color: a.$grey;
@@ -63,28 +92,29 @@
   overflow: hidden;
   transition: 0.2s;
   cursor: pointer;
+  border: none;
 
-  .ftr__contact-btn-text {
+  .contact__contact-btn-text {
     color: a.$grey;
   }
 
   &:hover {
-    .ftr__contact-btn-text {
+    .contact__contact-btn-text {
       margin-left: 65px;
       transition: 0.2s;
     }
 
-    .ftr__contact-btn-inner {
+    .contact__contact-btn-inner {
       left: -130px;
     }
   }
 }
 
-.ftr__contact-btn-container {
+.contact__contact-btn-container {
   margin-top: a.$margin-em-spacing-sm;
 }
 
-.ftr__contact-btn-inner {
+.contact__contact-btn-inner {
   position: relative;
   width: 200px;
   height: 50px;
@@ -92,8 +122,9 @@
   left: -250px;
   transition: 0.3s;
   background: a.$red;
+  border: none;
 
-  .ftr__contact-btn-inner-text {
+  .contact__contact-btn-inner-text {
     margin: {
       top: 63px;
       right: -130px;
@@ -103,11 +134,11 @@
   }
 }
 
-.ftr__container {
+.contact__container {
   display: flex;
   justify-content: center;
 
-  > .ftr__avatar {
+  > .contact__avatar {
     @include a.sm-tablets-max-width {
       max-width: 150px;
     }

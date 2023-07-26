@@ -2,7 +2,7 @@
   {
     "title": "Portfolio",
     "description": "You're on this right now! Built in 2022 and overhauled as part of my bootcamp at The Jump Digital School.   ",
-    "image": "https://evan-portfolio.s3.eu-west-2.amazonaws.com/portfolio-.png",
+    "image": "https://evan-portfolio.s3.eu-west-2.amazonaws.com/portfolio.png",
     "link": "#",
     "github": "https://github.com/evancp87/portfolio",
     "type": "Bootcamp",
@@ -88,8 +88,8 @@
     "title": "Mars Rover Dashboard",
     "description":
       "Part of my Udacity Intermediate Javascript Nanodegree. A dashboard showing the information of 3 different Mars Rovers and an image of the day, consuming data from the Nasa Mars Rover api.",
-    "image": "src/assets/Images/mars-dashboard.png",
-    "github": "https://evan-portfolio.s3.eu-west-2.amazonaws.com/mars-dashboard.png",
+    "image": "https://evan-portfolio.s3.eu-west-2.amazonaws.com/mars-dashboard.png",
+    "github": "https://github.com/evancp87/mars-dashboard",
 
     "link": "https://mars-rover-dashboard-7uwc.onrender.com/",
     "type": "Other",

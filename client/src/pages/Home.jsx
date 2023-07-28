@@ -8,7 +8,7 @@ import { Transition, SwitchTransition } from "react-transition-group";
 const Header = () => {
   const introRef = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const headerChildren = introRef.current.children;
 
     gsap.from(headerChildren, {
@@ -27,8 +27,10 @@ const Header = () => {
           Hello, 👋🏽 I'm Evan Parker. Software Engineer
         </h1>
         <p className="hdr__intro-tech">
-          Building attractive full stack websites with React - Next JS - Sass -
-          Tailwind - Express - PostGreSQL - MongoDB
+          ○ Building attractive full stack websites with React - Next JS - Sass
+          - Tailwind - Express - MySQL - MongoDB
+          <br /> ○ Professional experience in the tech industry, with freelance
+          web development experience
         </p>
         <Avatar />
         <ThoughtBubble />

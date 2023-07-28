@@ -3,7 +3,7 @@
     "title": "Portfolio",
     "description": "You're on this right now! Built in 2022 and overhauled as part of my bootcamp at The Jump Digital School.   ",
     "image": "https://evan-portfolio.s3.eu-west-2.amazonaws.com/portfolio.png",
-    "link": "#",
+    "link": "https://www.evanparker.co.uk/",
     "github": "https://github.com/evancp87/portfolio",
     "type": "Bootcamp",
     "stack": ["Redux", "React"]
@@ -37,7 +37,7 @@
     "title": "Glimpses",
     "description": "A freelance project for an arts website for an organisation of art curators in Europe ",
     "image": "https://evan-portfolio.s3.eu-west-2.amazonaws.com/glimpses.png",
-    "github": "#",
+    "github": "",
 
     "link": "https://glimpsesof.art/",
     "type": "Freelance",
@@ -50,7 +50,7 @@
     "description":
       "A website for an organisation of film producers based in Bahrain. An eye catching grid of videos and use of the vimeo api were fun to build on this project",
     "image": "https://evan-portfolio.s3.eu-west-2.amazonaws.com/iheartfilm.png",
-    "github": "#",
+    "github": "",
 
     "link": "https://iheartfilm.net/",
     "type": "Freelance",
@@ -62,7 +62,7 @@
     "title": "Black Boxes",
     "description": "Website for a digital art project called Black Boxes, which I built out the homepage and grid layouts for, including a scrolling ticker tape style line of words",
     "image": "https://evan-portfolio.s3.eu-west-2.amazonaws.com/blackboxes.png",
-    "github": "#",
+    "github": "",
 
     "link": "https://opentheblackboxes.org/",
     "type": "Freelance",
@@ -103,7 +103,6 @@
       "A link to my Front End Mentor profile page, showing a list of completed challenges",
     "image": "https://evan-portfolio.s3.eu-west-2.amazonaws.com/frontendmentor.png",
     "github": "#",
-
     "link": "https://www.frontendmentor.io/profile/evancp87",
     "type": "Other",
     "stack": ["Redux", "React"]

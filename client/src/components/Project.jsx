@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Github from "../assets/Images/github.png";
-const Project = ({ title, link, image, description, stack }) => {
+const Project = ({ title, link, image, description, stack, github }) => {
+  const hasLink =
+    github !== undefined && github !== null && github.trim() !== "";
   return (
     <li key={title} className="projects__project">
       <div className="projects__proj-img-container">
@@ -22,20 +24,33 @@ const Project = ({ title, link, image, description, stack }) => {
           ))}
         </ul>
       </div>
-      <div className="projects__source-code">
+      <div
+        className="projects__source-code"
+        style={!hasLink ? { justifyContent: "flex-start" } : {}}
+      >
         <a href={link} target="_blank">
-          <p className="projects__source-code-live">Live Demo</p>
+          <p
+            style={!hasLink ? { marginLeft: "2em" } : {}}
+            className="projects__source-code-live"
+          >
+            Live Demo
+          </p>
         </a>
-        <div className="projects__source-code-container">
-          <img
-            src={Github}
-            className="projects__source-logo"
-            alt="github logo"
-          />
-          <a href={link}>
-            <p>Source</p>
-          </a>
-        </div>
+
+        {hasLink ? (
+          <div className="projects__source-code-container">
+            <img
+              src={Github}
+              className="projects__source-logo"
+              alt="github logo"
+            />
+            <a href={github} target="_blank">
+              <p>Source</p>
+            </a>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </li>
   );

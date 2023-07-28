@@ -74,6 +74,7 @@ const Projects = () => {
             title={project.title}
             image={project.image}
             link={project.link}
+            github={project.github}
             description={project.description}
             stack={project.stack}
           />

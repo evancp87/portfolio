@@ -5,7 +5,7 @@ const path = require("path");
 const PORT = process.env.PORT || 2000;
 const app = express();
 
-// Have Node serve the files for our built React app
+
 app.use(express.static(path.resolve(__dirname, "../client/dist/build")));
 app.use(express.json());
 

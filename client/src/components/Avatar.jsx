@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import classNames from "classnames";
-import Front from "../assets/Images/avatar-one.png";
+import Front from "../assets/Images/evan-portrait-lilac-min.jpg";
 import Back from "../assets/Images/evan-portrait.png";
 
 // avatar component

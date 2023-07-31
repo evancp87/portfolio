@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 import Front from "../assets/Images/avatar-one.png";
-import Back from "../assets/Images/evan-portrait.png";
+import Back from "../assets/Images/evan-portrait-lilac.jpg";
 
 // avatar component
 const Avatar = () => {

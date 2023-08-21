@@ -41,6 +41,12 @@
   }
 }
 
+@mixin lg-screens {
+  @media (min-width: 1650px) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: 1200px) {
     @content;

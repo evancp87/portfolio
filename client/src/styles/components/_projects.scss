@@ -55,6 +55,12 @@
     grid-column-gap: 2em;
   }
 
+
+  @include a.lg-screens {
+    grid-template-columns: repeat(3, 350px);
+
+  }
+
   .projects__project {
     background-color: a.$white;
     transition: box-shadow 0.5s ease-in-out;

@@ -29,8 +29,24 @@ export const SkillInfo = [
     image: nodeJSIcon,
   },
   {
+    title: "Next JS",
+    image: nextIcon,
+  },
+  {
     title: "React",
     image: reactIcon,
+  },
+  {
+    title: "TypeScript",
+    image: tsIcon,
+  },
+  {
+    title: "MongoDB",
+    image: mongoDBIcon,
+  },
+  {
+    title: "PostgreSQL",
+    image: postgreIcon,
   },
   {
     title: "HTML",
@@ -48,15 +64,7 @@ export const SkillInfo = [
     title: "Sass",
     image: sassIcon,
   },
-  {
-    title: "MongoDB",
-    image: mongoDBIcon,
-  },
-  {
-    title: "PostgreSQL",
-    image: postgreIcon,
-  },
-
+  
   {
     title: "Python & Django",
     image: pythonIcon,
@@ -65,12 +73,6 @@ export const SkillInfo = [
     title: "Figma",
     image: figmaIcon,
   },
-
-  //   {
-  //     title: "Django",
-  // image: djangoIcon,
-  // }
-
   {
     title: "Heroku",
     image: herokuIcon,
@@ -87,10 +89,6 @@ export const SkillInfo = [
   },
 
   {
-    title: "TypeScript",
-    image: tsIcon,
-  },
-  {
     title: "Slack",
     image: slackIcon,
   },
@@ -106,9 +104,5 @@ export const SkillInfo = [
   {
     title: "Jest",
     image: jestIcon,
-  },
-  {
-    title: "Next JS",
-    image: nextIcon,
   },
 ];

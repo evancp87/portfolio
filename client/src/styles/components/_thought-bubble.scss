@@ -34,6 +34,7 @@
 
     .thought-bubble__txt {
       color: $grey-text;
+      z-index: 1000;
       //   padding-left: 0.6em;
     }
   }

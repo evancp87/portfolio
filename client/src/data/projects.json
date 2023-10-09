@@ -1,35 +1,56 @@
  [
   {
     "title": "Portfolio",
-    "description": "You're on this right now! Built in 2022 and overhauled as part of my bootcamp at The Jump Digital School.   ",
+    "description": "You're on this right now! Built in 2022 and overhauled as part of my bootcamp at The Jump Digital School.",
     "image": "https://evan-portfolio.s3.eu-west-2.amazonaws.com/portfolio.png",
     "link": "https://www.evanparker.co.uk/",
     "github": "https://github.com/evancp87/portfolio",
     "type": "Bootcamp",
     "stack": ["Redux", "React"]
   },
+  {
+    "title": "ReelHub",
+    "description": "A full stack MERN Netflix style enterainment app. The user can register, upload an avatar, login, see and bookmark content",
+    "image": "https://reelhub.s3.eu-west-2.amazonaws.com/Reelhub.png",
+    "github": "https://github.com/evancp87/ReelHub",
 
+    "link": "https://reelhub.vercel.app/",
+    "type": "Bootcamp",
+    "stack": ["Next JS", "Redux Toolkit Query", "Tailwind Css", "Mongoose", "Node", "JWTs", "Jest" ]
+   
+  },
+  
   {
     "title": "First Level",
     "description": "The Frontend for my React project. A dynamic and eye catching video games ecommerce site using the RAWG api, the largest video games database in the world",
     "image": "https://evan-portfolio.s3.eu-west-2.amazonaws.com/first-level.png",
     "github": "https://github.com/evancp87/first-level",
-
+    
     "link": "https://first-level.netlify.app",
     "type": "Bootcamp",
     "stack": ["Redux Toolkit", "React","GSAP", "Tailwind Css", "DayJS" ]
-   
+    
   },
   {
     "title": "First Level Full Stack",
     "description": "The full stack version of my React project. A video games ecommerce site using the RAWG games api, and a MySQL database to handle user accounts and a wishlist system",
     "image": "https://first-level.s3.eu-west-2.amazonaws.com/first-level.png",
     "github": "https://github.com/evancp87/first-level-full-stack",
-
+    
     "link": "https://first-level.onrender.com",
     "type": "Bootcamp",
     "stack": ["Redux Toolkit", "React","GSAP", "Tailwind Css", "DayJS", "PhpMyAdmin", "Node", "JWTs" ]
-   
+    
+  },
+  {
+    "title": "Planet Facts",
+    "description": "A planet facts dashboard built with React",
+    "image": "https://planet-facts.s3.eu-west-2.amazonaws.com/planet-facts.png",
+    "github": "https://github.com/evancp87/fem-planet-facts",
+
+    "link": "https://fem-planet-facts-app.netlify.app/",
+    "type": "Bootcamp",
+    "stack": ["React", "Framer Motion", "Sass", "Axios" ] 
   },
   {
     "title": "Marriage Saver",
@@ -114,7 +135,7 @@
     "image": "https://evan-portfolio.s3.eu-west-2.amazonaws.com/mars-dashboard.png",
     "github": "https://github.com/evancp87/mars-dashboard",
 
-    "link": "https://mars-rover-dashboard-7uwc.onrender.com/",
+    "link": "https://mars-rover-dashboard.netlify.app/",
     "type": "Other",
     "stack": ["Redux", "React", "Immutable JS", "Sass"]
 

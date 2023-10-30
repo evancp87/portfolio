@@ -8,7 +8,7 @@ import { sort, selectProjects, setProjects } from "../services/projectsSlice";
 const Projects = () => {
   const dispatch = useDispatch();
   const projects = useSelector(selectProjects);
-  const [sortValue, setSortValue] = useState("Bootcamp");
+  const [sortValue, setSortValue] = useState("");
   const projectRef = useRef(null);
   const projectsRef = useRef(null);
 
@@ -49,9 +49,9 @@ const Projects = () => {
     let _projects = [...projects];
     if (sortValue) {
       _projects = _projects.filter((project) => {
-        const query = project.type
-          .toLowerCase()
-          .includes(sortValue.toLowerCase());
+        const query = project.type.some((t) =>
+          t.toLowerCase().includes(sortValue.toLowerCase())
+        );
         return query;
       });
     }
@@ -62,7 +62,11 @@ const Projects = () => {
     <section className="projects" id="projects" ref={projectsRef}>
       <div className="projects__header">
         <h2>Projects</h2>
-        <Controls sortValue={sortValue} handleSortValue={handleSortValue} />
+        <Controls
+          sortValue={sortValue}
+          setSortValue={setSortValue}
+          handleSortValue={handleSortValue}
+        />
       </div>
 
       <ul className="projects__list" ref={projectRef}>

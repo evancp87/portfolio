@@ -5,7 +5,7 @@
     "image": "https://evan-portfolio.s3.eu-west-2.amazonaws.com/portfolio.png",
     "link": "https://www.evanparker.co.uk/",
     "github": "https://github.com/evancp87/portfolio",
-    "type": "Bootcamp",
+    "type": ["Redux", "React", "Frontend"],
     "stack": ["Redux", "React"]
   },
   {
@@ -15,7 +15,7 @@
     "github": "https://github.com/evancp87/ReelHub",
 
     "link": "https://reelhub.vercel.app/",
-    "type": "Bootcamp",
+    "type": ["Redux", "React", "Full-Stack", "TypeScript"],
     "stack": ["Next JS", "Redux Toolkit Query", "Tailwind Css", "Mongoose", "Node", "JWTs", "Jest" ]
    
   },
@@ -27,7 +27,7 @@
     "github": "https://github.com/evancp87/first-level",
     
     "link": "https://first-level.netlify.app",
-    "type": "Bootcamp",
+    "type": ["Redux", "React", "Frontend"],
     "stack": ["Redux Toolkit", "React","GSAP", "Tailwind Css", "DayJS" ]
     
   },
@@ -38,7 +38,7 @@
     "github": "https://github.com/evancp87/first-level-full-stack",
     
     "link": "https://first-level.onrender.com",
-    "type": "Bootcamp",
+    "type": ["Redux", "React", "Full-Stack"],
     "stack": ["Redux Toolkit", "React","GSAP", "Tailwind Css", "DayJS", "PhpMyAdmin", "Node", "JWTs" ]
     
   },
@@ -49,7 +49,7 @@
     "github": "https://github.com/evancp87/fem-planet-facts",
 
     "link": "https://fem-planet-facts-app.netlify.app/",
-    "type": "Bootcamp",
+    "type": ["React", "Frontend"],
     "stack": ["React", "Framer Motion", "Sass", "Axios" ] 
   },
   {
@@ -59,7 +59,7 @@
     "github": "https://github.com/WillHoward95/hackathon",
 
     "link": "https://64a9a399bcf4a1227fb0bfba--statuesque-platypus-8f8c9c.netlify.app/",
-    "type": "Bootcamp",
+    "type": ["React", "Frontend", "Redux"],
     "stack": ["Redux Toolkit", "React", "BootStrap"]
    
   },
@@ -72,7 +72,7 @@
     "github": "https://github.com/evancp87/ch14-weather-app",
 
     "link": "https://worldwideweatherr.netlify.app",
-    "type": "Bootcamp",
+    "type": ["Frontend"],
     "stack": ["JavaScript", "React", "Sass"]
 
 
@@ -84,7 +84,7 @@
     "github": "",
 
     "link": "https://glimpsesof.art/",
-    "type": "Freelance",
+    "type": ["Frontend"],
     "stack": ["JavaScript", "CSS"]
 
 
@@ -92,24 +92,24 @@
   {
     "title": "I heart Film",
     "description":
-      "A website for an organisation of film producers based in Bahrain. An eye catching grid of videos and use of the vimeo api were fun to build on this project",
+      "A freelance website for an organisation of film producers based in Bahrain. An eye catching grid of videos and use of the vimeo api were fun to build on this project",
     "image": "https://evan-portfolio.s3.eu-west-2.amazonaws.com/iheartfilm.png",
     "github": "",
 
     "link": "https://iheartfilm.net/",
-    "type": "Freelance",
+    "type": ["Frontend"],
     "stack": ["JavaScript", "CSS"]
 
 
   },
   {
     "title": "Black Boxes",
-    "description": "Website for a digital art project called Black Boxes, which I built out the homepage and grid layouts for, including a scrolling ticker tape style line of words",
+    "description": "A freelance Website for a digital art project called Black Boxes, which I built out the homepage and grid layouts for, including a scrolling ticker tape style line of words",
     "image": "https://evan-portfolio.s3.eu-west-2.amazonaws.com/blackboxes.png",
     "github": "",
 
     "link": "https://opentheblackboxes.org/",
-    "type": "Freelance",
+    "type": ["Frontend"],
     "stack": ["JavaScript", "CSS"]
 
 
@@ -123,7 +123,7 @@
     "github": "https://github.com/evancp87/would-you-rather",
 
     "link": "https://wyrcats.netlify.app/",
-    "type": "Other",
+    "type": ["Frontend", "React", "Redux"],
     "stack": ["Redux", "React",  "Sass", "React Bootstrap"]
 
 
@@ -136,20 +136,8 @@
     "github": "https://github.com/evancp87/mars-dashboard",
 
     "link": "https://mars-rover-dashboard.netlify.app/",
-    "type": "Other",
+    "type": ["Frontend"],
     "stack": ["Redux", "React", "Immutable JS", "Sass"]
-
-
-  },
-  {
-    "title": "Frontend Mentor projects",
-    "description":
-      "A link to my Front End Mentor profile page, showing a list of completed challenges",
-    "image": "https://evan-portfolio.s3.eu-west-2.amazonaws.com/frontendmentor.png",
-    "github": "#",
-    "link": "https://www.frontendmentor.io/profile/evancp87",
-    "type": "Other",
-    "stack": ["Redux", "React"]
 
 
   }

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 // Singular Project component that takes props from Projects file and project data
 const Skill = ({ image, title }) => {
   const [showTooltip, setShowTooltip] = useState(false);
-  console.log(showTooltip);
 
   return (
     <li

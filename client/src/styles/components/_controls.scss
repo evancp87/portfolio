@@ -3,6 +3,7 @@
 .controls {
   --btn-color: #69cf95;
   @include flexbox-config($justify-content: center);
+  flex-wrap: wrap;
   margin-bottom: 2em;
   gap: 1em;
 

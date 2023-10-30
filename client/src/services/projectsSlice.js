@@ -9,7 +9,6 @@ export const setProjects = createAsyncThunk(
   async () => {
     try {
       const response = await getProjects();
-      console.log("checking the response", response);
       return response;
     } catch (error) {
       console.log("error:", error);

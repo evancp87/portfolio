@@ -33,7 +33,6 @@ const Projects = () => {
   }, [sortValue]);
 
   const handleSortValue = (e) => {
-    console.log("the sort value is", e);
     setSortValue(e);
   };
   const getProjects = useCallback(() => {

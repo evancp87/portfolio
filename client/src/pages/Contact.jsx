@@ -32,10 +32,7 @@ const Contact = () => {
     try {
       const payload = { [name]: value };
       const res = await validate(payload);
-      console.log("I fired, helooooooo");
       setFormError(res);
-      console.log("I fired, helooooooo");
-      console.log(formError);
     } catch (error) {
       console.log("There was an error:", error);
     }

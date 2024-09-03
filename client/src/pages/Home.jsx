@@ -1,10 +1,10 @@
-import React from "react";
-import Avatar from "../components/Avatar";
-import NeonButton from "../components/NeonButton";
-import ThoughtBubble from "../components/ThoughtBubble";
-import { useEffect, useLayoutEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { Transition, SwitchTransition } from "react-transition-group";
+import React from 'react';
+import Avatar from '../components/Avatar';
+import NeonButton from '../components/NeonButton';
+import ThoughtBubble from '../components/ThoughtBubble';
+import { useEffect, useLayoutEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { Transition, SwitchTransition } from 'react-transition-group';
 const Header = () => {
   const introRef = useRef(null);
 
@@ -29,8 +29,8 @@ const Header = () => {
         <p className="hdr__intro-tech">
           ○ Building attractive full stack websites with React - Next JS - Sass
           - Tailwind - Express - MySQL - MongoDB
-          <br /> ○ Professional experience in the tech industry, with freelance
-          web development experience
+          <br /> ○ Professional experience in the tech industry, at Science
+          Museum Group and Royal Academy of Arts
         </p>
         <Avatar />
         <ThoughtBubble />

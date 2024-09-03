@@ -843,6 +843,7 @@ a {
 
 .projects__project-header-title {
   font-size: clamp(1rem, 0.786rem + 1.143vw, 1.5rem);
+  text-align: center;
 }
 
 :root {

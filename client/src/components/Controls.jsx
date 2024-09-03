@@ -1,31 +1,42 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const Controls = ({ handleSortValue, sortValue, setSortValue }) => {
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState('');
   return (
     // controlled component to filter projects
     <>
       <div className="controls">
         <button
           className="controls__btn"
-          onClick={() => handleSortValue("Frontend")}
-          style={sortValue === "Frontend" ? { backgroundColor: "#3E3EFF" } : {}}
+          onClick={() => handleSortValue('Professional-Experience')}
+          style={
+            sortValue === 'Professional-Experience'
+              ? { backgroundColor: '#3E3EFF' }
+              : {}
+          }
+        >
+          Professional Work
+        </button>
+        <button
+          className="controls__btn"
+          onClick={() => handleSortValue('Frontend')}
+          style={sortValue === 'Frontend' ? { backgroundColor: '#3E3EFF' } : {}}
         >
           Frontend
         </button>
         <button
           className="controls__btn"
-          onClick={() => handleSortValue("Full-Stack")}
+          onClick={() => handleSortValue('Full-Stack')}
           style={
-            sortValue === "Full-Stack" ? { backgroundColor: "#3E3EFF" } : {}
+            sortValue === 'Full-Stack' ? { backgroundColor: '#3E3EFF' } : {}
           }
         >
           Full-Stack
         </button>
         <button
           className="controls__btn"
-          onClick={() => handleSortValue("React")}
-          style={sortValue === "React" ? { backgroundColor: "#3E3EFF" } : {}}
+          onClick={() => handleSortValue('React')}
+          style={sortValue === 'React' ? { backgroundColor: '#3E3EFF' } : {}}
         >
           React
         </button>
@@ -33,21 +44,21 @@ const Controls = ({ handleSortValue, sortValue, setSortValue }) => {
       <div className="controls">
         <button
           className="controls__btn"
-          onClick={() => handleSortValue("Redux")}
-          style={sortValue === "Redux" ? { backgroundColor: "#3E3EFF" } : {}}
+          onClick={() => handleSortValue('Redux')}
+          style={sortValue === 'Redux' ? { backgroundColor: '#3E3EFF' } : {}}
         >
           Redux
         </button>
         <button
           className="controls__btn"
-          onClick={() => handleSortValue("TypeScript")}
+          onClick={() => handleSortValue('TypeScript')}
           style={
-            sortValue === "TypeScript" ? { backgroundColor: "#3E3EFF" } : {}
+            sortValue === 'TypeScript' ? { backgroundColor: '#3E3EFF' } : {}
           }
         >
           TypeScript
         </button>
-        <button className="controls__btn" onClick={() => setSortValue("")}>
+        <button className="controls__btn" onClick={() => setSortValue('')}>
           Reset
         </button>
       </div>

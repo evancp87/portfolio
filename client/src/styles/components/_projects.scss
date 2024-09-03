@@ -1,4 +1,4 @@
-@use "../abstracts/" as a;
+@use '../abstracts/' as a;
 
 // project section- slanted top and bottom with before and after
 
@@ -55,10 +55,8 @@
     grid-column-gap: 2em;
   }
 
-
   @include a.lg-screens {
     grid-template-columns: repeat(3, 350px);
-
   }
 
   .projects__project {
@@ -180,4 +178,5 @@
 
 .projects__project-header-title {
   font-size: clamp(1rem, 0.786rem + 1.143vw, 1.5rem);
+  text-align: center;
 }

@@ -1,15 +1,14 @@
-import React from "react";
-import { AiFillGithub } from "react-icons/ai";
-import { AiFillInstagram } from "react-icons/ai";
-import { TiSocialLinkedinCircular } from "react-icons/ti";
-import { IconContext } from "react-icons";
+import React from 'react';
+import { AiFillGithub } from 'react-icons/ai';
+import { AiFillInstagram } from 'react-icons/ai';
+import { TiSocialLinkedinCircular } from 'react-icons/ti';
+import { IconContext } from 'react-icons';
 
-// socials bar using icons from react-icons- linked to my socials. IconContext to style the icons
 const Socials = () => {
   return (
     <div className="socials">
       <ul>
-        <IconContext.Provider value={{ size: "2rem", padding: "5em" }}>
+        <IconContext.Provider value={{ size: '2rem', padding: '5em' }}>
           <li className="socials__item">
             <a href="https://github.com/evancp87">
               <AiFillGithub />

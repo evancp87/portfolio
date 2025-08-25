@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 const Controls = ({ handleSortValue, sortValue, setSortValue }) => {
-  const [active, setActive] = useState('');
   return (
     // controlled component to filter projects
     <>

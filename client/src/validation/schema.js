@@ -1,6 +1,4 @@
-import joi from "joi";
-
-const customEmailError = "Invalid email address format";
+import joi from 'joi';
 
 export const formSchema = {
   email: joi

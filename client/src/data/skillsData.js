@@ -21,6 +21,12 @@ import redisIcon from '../assets/Images/redis.png';
 import awsIcon from '../assets/Images/aws.png';
 import dockerIcon from '../assets/Images/docker.png';
 import travisIcon from '../assets/Images/travis.png';
+import rtlIcon from '../assets/Images/rtl.png';
+import vitestIcon from '../assets/Images/vitest.png';
+import auth0Icon from '../assets/Images/auth0.png';
+import graphQLIcon from '../assets/Images/graphQL.png';
+import zodIcon from '../assets/Images/zod.png';
+import shadcnIcon from '../assets/Images/shadcn.png';
 
 export const SkillInfo = [
   {
@@ -42,6 +48,10 @@ export const SkillInfo = [
   {
     title: 'TypeScript',
     image: tsIcon,
+  },
+  {
+    title: 'GraphQL',
+    image: graphQLIcon,
   },
   {
     title: 'MongoDB',
@@ -117,7 +127,29 @@ export const SkillInfo = [
     image: redisIcon,
   },
   {
+    title: 'Vitest',
+    image: vitestIcon,
+  },
+  {
+    title: 'React Testing Library',
+    image: rtlIcon,
+  },
+
+  {
+    title: 'Auth0',
+    image: auth0Icon,
+  },
+  {
     title: 'Docker',
     image: dockerIcon,
+  },
+
+  {
+    title: 'Zod',
+    image: zodIcon,
+  },
+  {
+    title: 'Shadcn',
+    image: shadcnIcon,
   },
 ];

@@ -1,14 +1,14 @@
-import React, { useEffect, useCallback, useRef, useState } from "react";
-import gsap from "gsap";
-import Project from "../components/Project";
-import Controls from "../components/Controls";
-import { useDispatch, useSelector } from "react-redux";
-import { sort, selectProjects, setProjects } from "../services/projectsSlice";
+import React, { useEffect, useCallback, useRef, useState } from 'react';
+import gsap from 'gsap';
+import Project from '../components/Project';
+import Controls from '../components/Controls';
+import { useDispatch, useSelector } from 'react-redux';
+import { sort, selectProjects, setProjects } from '../services/projectsSlice';
 
 const Projects = () => {
   const dispatch = useDispatch();
   const projects = useSelector(selectProjects);
-  const [sortValue, setSortValue] = useState("");
+  const [sortValue, setSortValue] = useState('');
   const projectRef = useRef(null);
   const projectsRef = useRef(null);
 
@@ -47,6 +47,7 @@ const Projects = () => {
   const filteredProjects = () => {
     let _projects = [...projects];
     if (sortValue) {
+      console.log(sortValue, _projects, 'projcets');
       _projects = _projects.filter((project) => {
         const query = project.type.some((t) =>
           t.toLowerCase().includes(sortValue.toLowerCase())

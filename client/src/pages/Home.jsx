@@ -28,9 +28,9 @@ const Header = () => {
         </h1>
         <p className="hdr__intro-tech">
           ○ Building attractive full stack websites with React - Next JS - Sass
-          - Tailwind - Express - MySQL - MongoDB
-          <br /> ○ Professional experience in the tech industry, at Science
-          Museum Group and Royal Academy of Arts
+          - Tailwind - Express - TypeScript - GraphQL
+          <br /> ○ Professional experience in the tech industry, at Foundry OS,
+          Science Museum Group and Royal Academy of Arts
         </p>
         <Avatar />
         <ThoughtBubble />

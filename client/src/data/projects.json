@@ -2,7 +2,7 @@
   {
     "title": "Foundry OS",
     "description": "A financial services operating system that helps companies build and launch fintech products faster. It acts as a flexible orchestration layer between clients' apps and different providers (payments, KYC, accounts, fraud, etc.), so you’re not locked into a single vendor.",
-    "image": "https://evan-portfolio.s3.eu-west-2.amazonaws.com/collections-online.png",
+    "image": "https://evan-portfolio.s3.eu-west-2.amazonaws.com/foundry.png",
     "github": "https://www.foundry-os.com/",
     "link": "https://www.foundry-os.com/",
     "type": ["Frontend", "Professional-Experience", "TypeScript"],

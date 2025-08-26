@@ -24,7 +24,7 @@ import travisIcon from '../assets/Images/travis.png';
 import rtlIcon from '../assets/Images/rtl.png';
 import vitestIcon from '../assets/Images/vitest.png';
 import auth0Icon from '../assets/Images/auth0.png';
-import graphQLIcon from '../assets/Images/graphQL.png';
+import graphQLIcon from '../assets/Images/graphql.png';
 import zodIcon from '../assets/Images/zod.png';
 import shadcnIcon from '../assets/Images/shadcn.png';
 

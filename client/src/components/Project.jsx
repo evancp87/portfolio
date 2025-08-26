@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import Github from "../assets/Images/github.png";
+import React, { useState } from 'react';
+import Github from '../assets/Images/github.png';
 const Project = ({ title, link, image, description, stack, github }) => {
   const hasLink =
-    github !== undefined && github !== null && github.trim() !== "";
+    github !== undefined && github !== null && github.trim() !== '';
   return (
     <li key={title} className="projects__project">
       <div className="projects__proj-img-container">
@@ -14,23 +14,24 @@ const Project = ({ title, link, image, description, stack, github }) => {
         <div className="projects__project-header">
           <h2 className="projects__project-header-title"> {title}</h2>
         </div>
-
-        <p className="projects__proj-description">{description}</p>
-        <ul className="projects__tech-stack">
-          {stack.map((tech, index) => (
-            <li className="projects__tech-stack-item" key={index}>
-              {tech}
-            </li>
-          ))}
-        </ul>
+        <div className="projects__project-details-container">
+          <p className="projects__proj-description">{description}</p>
+          <ul className="projects__tech-stack">
+            {stack.map((tech, index) => (
+              <li className="projects__tech-stack-item" key={index}>
+                {tech}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
       <div
         className="projects__source-code"
-        style={!hasLink ? { justifyContent: "flex-start" } : {}}
+        style={!hasLink ? { justifyContent: 'flex-start' } : {}}
       >
         <a href={link} target="_blank">
           <p
-            style={!hasLink ? { marginLeft: "2em" } : {}}
+            style={!hasLink ? { marginLeft: '2em' } : {}}
             className="projects__source-code-live"
           >
             Live Demo
@@ -49,7 +50,7 @@ const Project = ({ title, link, image, description, stack, github }) => {
             </a>
           </div>
         ) : (
-          ""
+          ''
         )}
       </div>
     </li>

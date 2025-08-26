@@ -1,13 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
-import Avatar from "../assets/Images/avatar-two.png";
-import gsap from "gsap";
-import { validate } from "../validation/index.js";
+import React, { useState, useRef, useEffect } from 'react';
+import Avatar from '../assets/Images/avatar-two.png';
+import gsap from 'gsap';
+import { validate } from '../validation/index.js';
 const Contact = () => {
-  const [sending, setSending] = useState("");
+  const [sending, setSending] = useState('');
   const [formData, setFormData] = useState({
-    email: "",
-    name: "",
-    message: "",
+    email: '',
+    name: '',
+    message: '',
   });
   const [formError, setFormError] = useState(null);
   const contactRef = useRef(null);
@@ -34,7 +34,7 @@ const Contact = () => {
       const res = await validate(payload);
       setFormError(res);
     } catch (error) {
-      console.log("There was an error:", error);
+      console.log('There was an error:', error);
     }
   };
 
@@ -42,33 +42,32 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formElement = e.target.closest("form");
+    const formElement = e.target.closest('form');
     const formToSend = new FormData(formElement);
-    setSending("📧 Hold tight while we send your message");
-    formToSend.append("access_key", "d42806d5-a27e-4db5-a11c-183f4bec2ee0");
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
+    setSending('📧 Hold tight while we send your message');
+    formToSend.append('access_key', 'd42806d5-a27e-4db5-a11c-183f4bec2ee0');
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
       body: formToSend,
     });
 
     const result = await response.json();
 
     if (result.success) {
-      setSending("✅ Email received, I will respond asap!");
+      setSending('✅ Email received, I will respond asap!');
       setFormData({
-        email: "",
-        name: "",
-        message: "",
+        email: '',
+        name: '',
+        message: '',
       });
     } else {
-      setSending("🤔 Email failed, please try again.");
+      setSending('🤔 Email failed, please try again.');
     }
   };
   return (
     <section className="contact">
       <div className="contact__info" ref={contactRef}>
         <div className="contact__container">
-          {/* avatar img */}
           <img
             className="contact__avatar"
             src={Avatar}
@@ -77,29 +76,20 @@ const Contact = () => {
         </div>
         <div className="contact__copyright">
           <p> Evan Parker ⓒ {year}</p>
-          {/*  contact button*/}
 
           <form
             className="contact__form"
             action="https://api.web3forms.com/submit"
             method="POST"
           >
-            {/* <div style={{ display: "flex", flexWrap: "wrap" }}>
-              {formError &&
-                formError.map((error, index) => (
-                  <p key={index}>
-                    {error.message}
-                  </p>
-                ))}
-            </div> */}
             <div
               className="error-container"
-              style={{ height: formError ? "auto" : "0" }}
+              style={{ height: formError ? 'auto' : '0' }}
             >
               {formError &&
                 formError.map((error, index) =>
-                  error.key === "email" ? (
-                    <p key={index} style={{ color: "#FF3E3E" }}>
+                  error.key === 'email' ? (
+                    <p key={index} style={{ color: '#FF3E3E' }}>
                       {error.message}
                     </p>
                   ) : null
@@ -122,12 +112,12 @@ const Contact = () => {
             />
             <div
               className="error-container"
-              style={{ height: formError ? "auto" : "0" }}
+              style={{ height: formError ? 'auto' : '0' }}
             >
               {formError &&
                 formError.map((error, index) =>
-                  error.key === "name" ? (
-                    <p key={index} style={{ color: "#FF3E3E" }}>
+                  error.key === 'name' ? (
+                    <p key={index} style={{ color: '#FF3E3E' }}>
                       {error.message}
                     </p>
                   ) : null
@@ -144,12 +134,12 @@ const Contact = () => {
             />
             <div
               className="error-container"
-              style={{ height: formError ? "auto" : "0" }}
+              style={{ height: formError ? 'auto' : '0' }}
             >
               {formError &&
                 formError.map((error, index) =>
-                  error.key === "message" ? (
-                    <p key={index} style={{ color: "#FF3E3E" }}>
+                  error.key === 'message' ? (
+                    <p key={index} style={{ color: '#FF3E3E' }}>
                       {error.message}
                     </p>
                   ) : null
